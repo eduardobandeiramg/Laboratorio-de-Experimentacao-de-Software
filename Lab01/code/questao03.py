@@ -9,7 +9,7 @@ def fazerQuery(estrelas):
   url = "https://api.github.com/graphql"
   header = {"Authorization": f"Bearer {token}" , "Content-Type": "application/json"}
   body = f"""query {{
-        search(query: "stars:>{estrelas}", type: REPOSITORY, first: 100) {{
+        search(query: "stars:>{estrelas}", type: REPOSITORY, first: 20) {{
             nodes {{
                 ... on Repository {{
                     name
@@ -34,7 +34,7 @@ def fazerQueryComPaginacao(estrelas , aPartirDe):
   url = "https://api.github.com/graphql"
   header = {"Authorization": f"Bearer {token}" , "Content-Type": "application/json"}
   body = f"""query {{
-        search(query: "stars:>{estrelas}", type: REPOSITORY, first: 100 , after: "{aPartirDe}") {{
+        search(query: "stars:>{estrelas}", type: REPOSITORY, first: 20 , after: "{aPartirDe}") {{
             nodes {{
                 ... on Repository {{
                     name
@@ -94,8 +94,13 @@ while continuaLoop:
         print(f"{str(loop)}º Repositório mais popular do GitHub:")
         loop+=1
         print(valor)
-        releases.append(valor["releases"]["totalCount"])
-        linhasDaPlanilha.append(valor["name"], valor["stargazerCount"], valor["releases"]["totalCount"], statistics.median(releases))
+        if valor["releases"] is not None:
+          release = valor["releases"]["totalCount"]
+          releases.append(release)
+        else:
+          release = 0
+          releases.append(0)
+        linhasDaPlanilha.append([valor["name"], valor["stargazerCount"], release, statistics.median(releases)])
       print(f"Lista das quantidades totais de releases: {releases}")
       print(f"Mediana das quantidades totais de releases: {statistics.median(releases)}")
       with open("questao03.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
