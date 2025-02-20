@@ -1,57 +1,105 @@
 import requests
 from datetime import datetime
 import statistics
+import csv
 
-# Definindo quantidade de repositóris desejados:
-qtdRepositorios = 100
-
-# organizando função para a requisição:
+# Definindo a função para requisição:
 def fazerQuery(estrelas):
   token = ""
   url = "https://api.github.com/graphql"
   header = {"Authorization": f"Bearer {token}" , "Content-Type": "application/json"}
   body = f"""query {{
-        search(query: "stars:>{estrelas}", type: REPOSITORY, first: {qtdRepositorios}) {{
+        search(query: "stars:>{estrelas}", type: REPOSITORY, first: 100) {{
             nodes {{
                 ... on Repository {{
                     name
                     stargazerCount
-                    releases{{totalCount}}
+                    releases{{
+                    totalCount
+                    }}
                 }}
+            }}
+            pageInfo{{
+            hasNextPage
+            endCursor
             }}
         }}
     }}"""
   resposta = requests.post(url, headers= header, json= {"query": body})
   return resposta
 
-# Criando lista para armazenar idades dos repositorios:
-releases = []
-# Criando variavel de controle do loop:
+# Definindo a função para requisição COM PAGINAÇÃO:
+def fazerQueryComPaginacao(estrelas , aPartirDe):
+  token = ""
+  url = "https://api.github.com/graphql"
+  header = {"Authorization": f"Bearer {token}" , "Content-Type": "application/json"}
+  body = f"""query {{
+        search(query: "stars:>{estrelas}", type: REPOSITORY, first: 100 , after: "{aPartirDe}") {{
+            nodes {{
+                ... on Repository {{
+                    name
+                    stargazerCount
+                    releases{{
+                    totalCount
+                    }}
+                }}
+            }}
+            pageInfo{{
+            hasNextPage
+            endCursor
+            }}
+        }}
+    }}"""
+  resposta = requests.post(url, headers= header, json= {"query": body})
+  return resposta
+
+# Criando variaveis de controle dos loops:
 continuaLoop = True
+loopDeContagem = True
+# Criando lista que armazenará os totais de releases:
+releases = []
+# Criando variavel para armazenar localizacao do ultimo item:
+cursorfinal = ""
 # Definindo numero alto de estrelas:
 qtdEstrelas = 420000
+# Criando lista de linhas para o csv:
+linhasDaPlanilha = [["Repositório", "Estrelas", "Total de Releases", "Mediana"]]
 
 while continuaLoop:
+  # Reinicializando loop de contagem:
+  loopDeContagem = True
+  # Criando lista para armazenar repositorios:
+  repos = []
   resposta = fazerQuery(qtdEstrelas)
   if resposta.status_code == 200:
     respostaRequisicao = resposta.json()
-    qtd = len(respostaRequisicao["data"]["search"]["nodes"])
-    print(f"Quantidade de repositorios encontrados com mais de {qtdEstrelas} estrelas: {qtd}")
-    if qtd > 0:
-      print(f"Repositório encontrado: {respostaRequisicao["data"]["search"]["nodes"][qtd-1]["name"]}, com {respostaRequisicao["data"]["search"]["nodes"][qtd-1]["stargazerCount"]} estrelas")
-    if qtd < qtdRepositorios:
-      qtdEstrelas -= 3000
+    print(f"{len(respostaRequisicao["data"]["search"]["nodes"])} REPOSITÓRIOS NA PRIMEIRA PAGINA")
+    while loopDeContagem:
+      if len(respostaRequisicao["data"]["search"]["nodes"]) > 0:
+        repos.extend(respostaRequisicao["data"]["search"]["nodes"])
+      print(f"REPOSITORIOS ENCONTRADOS ATÉ AGORA: {len(repos)}")
+      if respostaRequisicao["data"]["search"]["pageInfo"]["hasNextPage"] == False:
+        loopDeContagem = False
+        print("Nao tem proxima pagina")
+      else:
+        cursorfinal = respostaRequisicao["data"]["search"]["pageInfo"]["endCursor"]
+        resposta = fazerQueryComPaginacao(qtdEstrelas , cursorfinal)
+        respostaRequisicao = resposta.json()
+    if len(repos) < 1000:
+      qtdEstrelas -= 5000
     else:
       continuaLoop = False
       loop = 1
-      print("\nENCONTRADOS OS 100 REPOSITORIOS MAIS POPULARES!!")
-      for valor in resposta.json()["data"]["search"]["nodes"]:
+      for valor in repos:
         print(f"{str(loop)}º Repositório mais popular do GitHub:")
         loop+=1
         print(valor)
         releases.append(valor["releases"]["totalCount"])
+        linhasDaPlanilha.append(valor["name"], valor["stargazerCount"], valor["releases"]["totalCount"], statistics.median(releases))
       print(f"Lista das quantidades totais de releases: {releases}")
       print(f"Mediana das quantidades totais de releases: {statistics.median(releases)}")
+      with open("questao03.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
+        csv.writer(arquivo).writerows(linhasDaPlanilha)
   else:
     print("Erro ao acessar API do GitHub")
     print("Código do erro:")

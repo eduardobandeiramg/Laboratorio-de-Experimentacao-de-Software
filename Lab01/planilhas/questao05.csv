@@ -1,0 +1,1001 @@
+Repositório,Estrelas,Linguagem Primária,Linguagem Primária é Top-10?,Percentual que utiliza linguagem popular
+freeCodeCamp,410244,TypeScript,Sim,1.0
+free-programming-books,350779,HTML,Não,0.5
+awesome,347899,Sem informação,Sem informação,0.5
+build-your-own-x,337429,Markdown,Não,0.3333333333333333
+public-apis,327994,Python,Sim,0.5
+coding-interview-university,312122,Sem informação,Sem informação,0.5
+developer-roadmap,308758,TypeScript,Sim,0.6
+system-design-primer,289707,Python,Sim,0.6666666666666666
+996.ICU,270281,Sem informação,Sem informação,0.6666666666666666
+awesome-python,234633,Python,Sim,0.7142857142857143
+react,232454,JavaScript,Sim,0.75
+project-based-learning,218275,Sem informação,Sem informação,0.75
+awesome-selfhosted,217325,Sem informação,Sem informação,0.75
+vue,208394,TypeScript,Sim,0.7777777777777778
+Python,197470,Python,Sim,0.8
+javascript-algorithms,190168,JavaScript,Sim,0.8181818181818182
+tensorflow,188124,C++,Sim,0.8333333333333334
+linux,188088,C,Sim,0.8461538461538461
+You-Dont-Know-JS,181064,Sem informação,Sem informação,0.8461538461538461
+CS-Notes,178945,Sem informação,Sem informação,0.8461538461538461
+ohmyzsh,176201,Shell,Sim,0.8571428571428571
+computer-science,175488,Sem informação,Sem informação,0.8571428571428571
+AutoGPT,171693,Python,Sim,0.8666666666666667
+bootstrap,171434,JavaScript,Sim,0.875
+flutter,168751,Dart,Não,0.8235294117647058
+vscode,167567,TypeScript,Sim,0.8333333333333334
+gitignore,164506,Sem informação,Sem informação,0.8333333333333334
+Python-100-Days,161024,Jupyter Notebook,Não,0.7894736842105263
+the-book-of-secret-knowledge,158593,Sem informação,Sem informação,0.7894736842105263
+the-art-of-command-line,154768,Sem informação,Sem informação,0.7894736842105263
+JavaGuide,148205,Java,Sim,0.8
+stable-diffusion-webui,148098,Python,Sim,0.8095238095238095
+javascript,146149,JavaScript,Sim,0.8181818181818182
+transformers,139809,Python,Sim,0.8260869565217391
+awesome-go,138459,Go,Sim,0.8333333333333334
+youtube-dl,134295,Python,Sim,0.84
+next.js,129525,JavaScript,Sim,0.8461538461538461
+ollama,128040,Go,Sim,0.8518518518518519
+fucking-algorithm,126877,Markdown,Não,0.8214285714285714
+go,125965,Go,Sim,0.8275862068965517
+30-seconds-of-code,122711,JavaScript,Sim,0.8333333333333334
+tech-interview-handbook,121955,TypeScript,Sim,0.8387096774193549
+awesome-chatgpt-prompts,120665,HTML,Não,0.8125
+react-native,120655,C++,Sim,0.8181818181818182
+Microsoft-Activation-Scripts,119865,Batchfile,Não,0.7941176470588235
+scrcpy,117850,C,Sim,0.8
+electron,115537,C++,Sim,0.8055555555555556
+PowerToys,114952,C#,Sim,0.8108108108108109
+kubernetes,113216,Go,Sim,0.8157894736842105
+free-programming-books-zh_CN,112674,Sem informação,Sem informação,0.8157894736842105
+d3,109845,Shell,Sim,0.8205128205128205
+node,109741,JavaScript,Sim,0.825
+hello-algo,109172,Java,Sim,0.8292682926829268
+axios,106354,JavaScript,Sim,0.8333333333333334
+three.js,104418,JavaScript,Sim,0.8372093023255814
+create-react-app,103103,JavaScript,Sim,0.8409090909090909
+TypeScript,102277,TypeScript,Sim,0.8444444444444444
+nodebestpractices,101827,Dockerfile,Não,0.8260869565217391
+deno,101812,Rust,Não,0.8085106382978723
+rust,101390,Rust,Não,0.7916666666666666
+yt-dlp,101044,Python,Sim,0.7959183673469388
+langchain,101044,Jupyter Notebook,Não,0.78
+HelloGitHub,98680,Python,Sim,0.7843137254901961
+terminal,97095,C++,Sim,0.7884615384615384
+angular,96988,TypeScript,Sim,0.7924528301886793
+material-ui,94820,TypeScript,Sim,0.7962962962962963
+godot,94125,C++,Sim,0.8
+ant-design,93752,TypeScript,Sim,0.8035714285714286
+excalidraw,92746,TypeScript,Sim,0.8070175438596491
+clean-code-javascript,92491,JavaScript,Sim,0.8103448275862069
+free-for-dev,92364,HTML,Não,0.7966101694915254
+papers-we-love,90972,Shell,Sim,0.8
+java-design-patterns,90781,Java,Sim,0.8032786885245902
+frp,90641,Go,Sim,0.8064516129032258
+iptv,90363,JavaScript,Sim,0.8095238095238095
+thefuck,90119,Python,Sim,0.8125
+puppeteer,89774,TypeScript,Sim,0.8153846153846154
+tauri,89629,Rust,Não,0.803030303030303
+Awesome-Hacking,89091,Sem informação,Sem informação,0.803030303030303
+vue-element-admin,88719,Vue,Não,0.7910447761194029
+pytorch,87054,Python,Sim,0.7941176470588235
+DeepSeek-V3,86770,Python,Sim,0.7971014492753623
+neovim,86337,Vim Script,Não,0.7857142857142857
+every-programmer-should-know,86220,Sem informação,Sem informação,0.7857142857142857
+storybook,85891,TypeScript,Sim,0.7887323943661971
+tailwindcss,85797,TypeScript,Sim,0.7916666666666666
+Web-Dev-For-Beginners,85089,JavaScript,Sim,0.7945205479452054
+rustdesk,82444,Rust,Não,0.7837837837837838
+django,82399,Python,Sim,0.7866666666666666
+nvm,82351,Shell,Sim,0.7894736842105263
+app-ideas,82219,Sem informação,Sem informação,0.7894736842105263
+bitcoin,82092,C++,Sim,0.7922077922077922
+svelte,81464,JavaScript,Sim,0.7948717948717948
+animate.css,81331,CSS,Não,0.7848101265822784
+ui,81265,TypeScript,Sim,0.7875
+realworld,81220,TypeScript,Sim,0.7901234567901234
+fastapi,81132,Python,Sim,0.7926829268292683
+NextChat,81059,TypeScript,Sim,0.7951807228915663
+opencv,80664,C++,Sim,0.7976190476190477
+gin,80394,Go,Sim,0.8
+awesome-mac,79762,JavaScript,Sim,0.8023255813953488
+laravel,79675,PHP,Sim,0.8045977011494253
+mall,79138,Java,Sim,0.8068181818181818
+DeepSeek-R1,78939,Sem informação,Sem informação,0.8068181818181818
+FiraCode,78189,Clojure,Não,0.797752808988764
+hugo,78157,Go,Sim,0.8
+supabase,77723,TypeScript,Sim,0.8021978021978022
+models,77391,Python,Sim,0.8043478260869565
+advanced-java,77043,Java,Sim,0.8064516129032258
+open-webui,76935,JavaScript,Sim,0.8085106382978723
+core,76647,Python,Sim,0.8105263157894737
+whisper,76643,Python,Sim,0.8125
+bun,76322,Zig,Não,0.8041237113402062
+spring-boot,76211,Java,Sim,0.8061224489795918
+mermaid,75924,TypeScript,Sim,0.8080808080808081
+LeetCodeAnimation,75705,Java,Sim,0.81
+v2rayN,75294,C#,Sim,0.8118811881188119
+manim,75129,Python,Sim,0.8137254901960784
+llama.cpp,74845,C++,Sim,0.8155339805825242
+Font-Awesome,74672,JavaScript,Sim,0.8173076923076923
+json-server,73665,JavaScript,Sim,0.819047619047619
+netdata,73543,C,Sim,0.8207547169811321
+awesome-interview-questions,73272,Sem informação,Sem informação,0.8207547169811321
+awesome-vue,72584,Sem informação,Sem informação,0.8207547169811321
+gpt4all,72544,C++,Sim,0.822429906542056
+awesome-for-beginners,71750,Sem informação,Sem informação,0.822429906542056
+elasticsearch,71679,Java,Sim,0.8240740740740741
+github-readme-stats,71544,JavaScript,Sim,0.8256880733944955
+ML-For-Beginners,71160,HTML,Não,0.8181818181818182
+generative-ai-for-beginners,71088,Jupyter Notebook,Não,0.8108108108108109
+funNLP,71081,Python,Sim,0.8125
+vite,70803,TypeScript,Sim,0.8141592920353983
+dify,70082,TypeScript,Sim,0.8157894736842105
+code-server,69907,TypeScript,Sim,0.8173913043478261
+stable-diffusion,69645,Jupyter Notebook,Não,0.8103448275862069
+Front-End-Checklist,69589,Sem informação,Sem informação,0.8103448275862069
+nest,69519,TypeScript,Sim,0.811965811965812
+playwright,69511,TypeScript,Sim,0.8135593220338984
+moby,69206,Go,Sim,0.8151260504201681
+HowToCook,69144,Dockerfile,Não,0.8083333333333333
+flask,68856,Python,Sim,0.8099173553719008
+node,68565,Shell,Sim,0.8114754098360656
+system-design-101,68514,Sem informação,Sem informação,0.8114754098360656
+screenshot-to-code,68456,Python,Sim,0.8130081300813008
+reveal.js,68382,JavaScript,Sim,0.8145161290322581
+hoppscotch,68325,TypeScript,Sim,0.816
+cs-video-courses,68156,Sem informação,Sem informação,0.816
+swift,68139,C++,Sim,0.8174603174603174
+fzf,68085,Go,Sim,0.8188976377952756
+redis,68047,C,Sim,0.8203125
+devops-exercises,67915,Python,Sim,0.8217054263565892
+ComfyUI,67888,Python,Sim,0.823076923076923
+syncthing,67761,Go,Sim,0.8244274809160306
+gpt_academic,67604,Python,Sim,0.8257575757575758
+awesome-machine-learning,66998,Python,Sim,0.8270676691729323
+awesome-react,66872,Sem informação,Sem informação,0.8270676691729323
+protobuf,66652,C++,Sim,0.8283582089552238
+grafana,66564,TypeScript,Sim,0.8296296296296296
+express,66339,JavaScript,Sim,0.8308823529411765
+Best-websites-a-programmer-should-visit,66039,Sem informação,Sem informação,0.8308823529411765
+d2l-zh,65933,Python,Sim,0.8321167883211679
+cpython,65381,Python,Sim,0.8333333333333334
+Chart.js,65358,JavaScript,Sim,0.8345323741007195
+strapi,65129,TypeScript,Sim,0.8357142857142857
+webpack,65045,JavaScript,Sim,0.8368794326241135
+Ventoy,64921,C,Sim,0.8380281690140845
+tesseract,64708,C++,Sim,0.8391608391608392
+33-js-concepts,64674,JavaScript,Sim,0.8402777777777778
+uptime-kuma,64660,JavaScript,Sim,0.8413793103448276
+superset,64563,TypeScript,Sim,0.8424657534246576
+ansible,64093,Python,Sim,0.8435374149659864
+interviews,63930,Java,Sim,0.8445945945945946
+gpt4free,63619,Python,Sim,0.8456375838926175
+javascript-questions,63419,Sem informação,Sem informação,0.8456375838926175
+PayloadsAllTheThings,63294,Python,Sim,0.8466666666666667
+imgui,63292,C++,Sim,0.847682119205298
+the-algorithm,62933,Scala,Não,0.8421052631578947
+keras,62585,Python,Sim,0.8431372549019608
+sherlock,62534,Python,Sim,0.8441558441558441
+sway,62455,Rust,Não,0.8387096774193549
+obs-studio,62345,C,Sim,0.8397435897435898
+resume.github.com,62251,JavaScript,Sim,0.8407643312101911
+awesome-public-datasets,62076,Sem informação,Sem informação,0.8407643312101911
+tabby,61999,TypeScript,Sim,0.8417721518987342
+openai-cookbook,61937,MDX,Não,0.8364779874213837
+echarts,61937,TypeScript,Sim,0.8375
+awesome-cpp,61923,Sem informação,Sem informação,0.8375
+n8n,61861,TypeScript,Sim,0.8385093167701864
+caddy,61768,Go,Sim,0.8395061728395061
+socket.io,61640,TypeScript,Sim,0.8404907975460123
+nocode,61572,Dockerfile,Não,0.8353658536585366
+scikit-learn,61173,Python,Sim,0.8363636363636363
+redux,61064,TypeScript,Sim,0.8373493975903614
+Java,60890,Java,Sim,0.8383233532934131
+SecLists,60856,PHP,Sim,0.8392857142857143
+AppFlowy,60787,Dart,Não,0.834319526627219
+Apollo-11,60587,Assembly,Não,0.8294117647058824
+awesome-scalability,60522,Sem informação,Sem informação,0.8294117647058824
+cs-self-learning,60467,HTML,Não,0.8245614035087719
+atom,60328,JavaScript,Sim,0.8255813953488372
+lodash,60168,JavaScript,Sim,0.8265895953757225
+architect-awesome,60014,Sem informação,Sem informação,0.8265895953757225
+Front-end-Developer-Interview-Questions,59983,Nunjucks,Não,0.8218390804597702
+design-resources-for-developers,59945,Sem informação,Sem informação,0.8218390804597702
+markdown-here,59801,JavaScript,Sim,0.8228571428571428
+awesome-nodejs,59640,Sem informação,Sem informação,0.8228571428571428
+jquery,59399,JavaScript,Sim,0.8238636363636364
+awesome-courses,59061,Sem informação,Sem informação,0.8238636363636364
+angular.js,58768,JavaScript,Sim,0.8248587570621468
+new-pac,58720,Python,Sim,0.8258426966292135
+annotated_deep_learning_paper_implementations,58671,Python,Sim,0.8268156424581006
+shadowsocks-windows,58616,C#,Sim,0.8277777777777777
+immich,58528,TypeScript,Sim,0.8287292817679558
+docusaurus,58410,TypeScript,Sim,0.8296703296703297
+open-interpreter,58401,Python,Sim,0.8306010928961749
+act,57869,Go,Sim,0.8315217391304348
+localsend,57809,Dart,Não,0.827027027027027
+fuel-core,57798,Rust,Não,0.8225806451612904
+localstack,57769,Python,Sim,0.8235294117647058
+alacritty,57725,Rust,Não,0.8191489361702128
+llama,57666,Python,Sim,0.8201058201058201
+spring-framework,57359,Java,Sim,0.8210526315789474
+prometheus,57337,Go,Sim,0.8219895287958116
+html5-boilerplate,56777,JavaScript,Sim,0.8229166666666666
+lazygit,56752,Go,Sim,0.8238341968911918
+rails,56487,Ruby,Não,0.8195876288659794
+rustlings,56458,Rust,Não,0.8153846153846154
+nerd-fonts,56427,CSS,Não,0.8112244897959183
+nuxt,56176,TypeScript,Sim,0.8121827411167513
+lobe-chat,55863,TypeScript,Sim,0.8131313131313131
+gatsby,55734,JavaScript,Sim,0.8140703517587939
+DeepLearning-500-questions,55411,JavaScript,Sim,0.815
+private-gpt,55264,Python,Sim,0.8159203980099502
+leetcode,55041,JavaScript,Sim,0.8168316831683168
+you-get,54978,Python,Sim,0.8177339901477833
+awesome-flutter,54830,Dart,Não,0.8137254901960784
+zed,54542,Rust,Não,0.8097560975609757
+awesome-chatgpt-prompts-zh,54270,Sem informação,Sem informação,0.8097560975609757
+scrapy,54238,Python,Sim,0.8106796116504854
+element,54185,Vue,Não,0.8067632850241546
+face_recognition,54166,Python,Sim,0.8076923076923077
+react-router,54086,TypeScript,Sim,0.8086124401913876
+ghidra,54007,Java,Sim,0.8095238095238095
+leetcode-master,54005,Shell,Sim,0.8104265402843602
+tldr,53671,Markdown,Não,0.8066037735849056
+ChatGPT,53624,Rust,Não,0.8028169014084507
+git,53586,C,Sim,0.8037383177570093
+Real-Time-Voice-Cloning,53555,Python,Sim,0.8046511627906977
+Prompt-Engineering-Guide,53494,MDX,Não,0.8009259259259259
+traefik,53324,Go,Sim,0.8018433179723502
+faceswap,53301,Python,Sim,0.8027522935779816
+gpt-engineer,53136,Python,Sim,0.8036529680365296
+normalize.css,52794,CSS,Não,0.8
+openpilot,52580,Python,Sim,0.8009049773755657
+drawio-desktop,52565,JavaScript,Sim,0.8018018018018018
+weekly,52559,Sem informação,Sem informação,0.8018018018018018
+requests,52530,Python,Sim,0.8026905829596412
+yolov5,52461,Python,Sim,0.8035714285714286
+mkcert,52345,Go,Sim,0.8044444444444444
+nocodb,52100,TypeScript,Sim,0.8053097345132744
+hackingtool,51625,Python,Sim,0.8061674008810573
+awesome-android-ui,51578,Sem informação,Sem informação,0.8061674008810573
+ionic-framework,51463,TypeScript,Sim,0.8070175438596491
+Stirling-PDF,51310,Java,Sim,0.8078602620087336
+bat,51192,Rust,Não,0.8043478260869565
+Semantic-UI,51147,JavaScript,Sim,0.8051948051948052
+material-design-icons,51126,Sem informação,Sem informação,0.8051948051948052
+project-layout,51080,Makefile,Não,0.8017241379310345
+Magisk,51008,C++,Sim,0.8025751072961373
+anime,50907,JavaScript,Sim,0.8034188034188035
+rich,50820,Python,Sim,0.8042553191489362
+guava,50534,Java,Sim,0.8050847457627118
+ripgrep,50418,Rust,Não,0.8016877637130801
+pi-hole,50418,Shell,Sim,0.8025210084033614
+zustand,50360,TypeScript,Sim,0.803347280334728
+minio,50284,Go,Sim,0.8041666666666667
+grok-1,50044,Python,Sim,0.8049792531120332
+kotlin,50038,Kotlin,Não,0.8016528925619835
+prettier,49982,JavaScript,Sim,0.8024691358024691
+uBlock,49800,JavaScript,Sim,0.8032786885245902
+pdf.js,49778,JavaScript,Sim,0.8040816326530612
+Docker-OSX,49744,Shell,Sim,0.8048780487804879
+jekyll,49626,Ruby,Não,0.8016194331983806
+github-cheat-sheet,49617,Sem informação,Sem informação,0.8016194331983806
+bulma,49583,CSS,Não,0.7983870967741935
+dive,49560,Go,Sim,0.7991967871485943
+meilisearch,49324,Rust,Não,0.796
+astro,49242,TypeScript,Sim,0.796812749003984
+DefinitelyTyped,49238,TypeScript,Sim,0.7976190476190477
+segment-anything,48940,Jupyter Notebook,Não,0.7944664031620553
+rclone,48905,Go,Sim,0.7952755905511811
+core,48858,TypeScript,Sim,0.796078431372549
+awesome-rust,48765,Rust,Não,0.79296875
+langflow,48734,Python,Sim,0.7937743190661478
+trackerslist,48725,Sem informação,Sem informação,0.7937743190661478
+chinese-poetry,48711,JavaScript,Sim,0.7945736434108527
+marktext,48584,JavaScript,Sim,0.7953667953667953
+Ghost,48449,JavaScript,Sim,0.7961538461538461
+etcd,48441,Go,Sim,0.7969348659003831
+go-ethereum,48414,Go,Sim,0.7977099236641222
+awesome-ios,48242,Swift,Não,0.7946768060836502
+cypress,48238,TypeScript,Sim,0.7954545454545454
+moment,48071,JavaScript,Sim,0.7962264150943397
+RxJava,48022,Java,Sim,0.7969924812030075
+hacker-scripts,47980,JavaScript,Sim,0.797752808988764
+powerlevel10k,47973,Shell,Sim,0.7985074626865671
+FFmpeg,47905,C,Sim,0.7992565055762082
+clash-verge-rev,47868,TypeScript,Sim,0.8
+joplin,47779,TypeScript,Sim,0.8007380073800738
+mastodon,47775,Ruby,Não,0.7977941176470589
+dayjs,47461,JavaScript,Sim,0.7985347985347986
+hiring-without-whiteboards,47438,JavaScript,Sim,0.7992700729927007
+professional-programming,47328,Python,Sim,0.8
+appwrite,47283,TypeScript,Sim,0.8007246376811594
+gitea,47200,Go,Sim,0.8014440433212996
+algorithm-visualizer,47147,JavaScript,Sim,0.802158273381295
+ImHex,47147,C++,Sim,0.8028673835125448
+OpenHands,47140,Python,Sim,0.8035714285714286
+starship,47105,Rust,Não,0.800711743772242
+big-list-of-naughty-strings,46970,Python,Sim,0.8014184397163121
+first-contributions,46933,Sem informação,Sem informação,0.8014184397163121
+MetaGPT,46757,Python,Sim,0.8021201413427562
+awesome-wechat-weapp,46748,Sem informação,Sem informação,0.8021201413427562
+llm-course,46746,Jupyter Notebook,Não,0.7992957746478874
+Motrix,46710,JavaScript,Sim,0.8
+serverless,46591,JavaScript,Sim,0.8006993006993007
+PaddleOCR,46573,Python,Sim,0.8013937282229965
+PowerShell,46486,C#,Sim,0.8020833333333334
+alist,46477,Go,Sim,0.8027681660899654
+julia,46438,Julia,Não,0.8
+100-Days-Of-ML-Code,46433,Sem informação,Sem informação,0.8
+okhttp,46153,Kotlin,Não,0.7972508591065293
+design-patterns-for-humans,45971,Sem informação,Sem informação,0.7972508591065293
+react,45943,JavaScript,Sim,0.797945205479452
+learn-regex,45891,Sem informação,Sem informação,0.797945205479452
+AFFiNE,45828,TypeScript,Sim,0.7986348122866894
+Projects,45789,Sem informação,Sem informação,0.7986348122866894
+v2ray-core,45769,Go,Sim,0.7993197278911565
+gogs,45500,Go,Sim,0.8
+x64dbg,45449,C++,Sim,0.8006756756756757
+huginn,44959,Ruby,Não,0.797979797979798
+architecture-samples,44777,Kotlin,Não,0.7953020134228188
+quill,44655,TypeScript,Sim,0.7959866220735786
+pandas,44632,Python,Sim,0.7966666666666666
+30-Days-Of-Python,44606,Python,Sim,0.7973421926910299
+meteor,44567,JavaScript,Sim,0.7980132450331126
+pixijs,44553,TypeScript,Sim,0.7986798679867987
+jest,44530,TypeScript,Sim,0.7993421052631579
+json,44469,C++,Sim,0.8
+type-challenges,44422,TypeScript,Sim,0.8006535947712419
+AdminLTE,44341,Astro,Não,0.7980456026058632
+terraform,44208,Go,Sim,0.7987012987012987
+Deep-Live-Cam,44008,Python,Sim,0.7993527508090615
+open-source-ios-apps,43978,Sem informação,Sem informação,0.7993527508090615
+30-Days-Of-JavaScript,43972,JavaScript,Sim,0.8
+PythonDataScienceHandbook,43904,Jupyter Notebook,Não,0.797427652733119
+fuels-ts,43901,TypeScript,Sim,0.7980769230769231
+fuels-rs,43893,Rust,Não,0.7955271565495208
+query,43871,TypeScript,Sim,0.7961783439490446
+pocketbase,43843,Go,Sim,0.7968253968253968
+hyper,43724,TypeScript,Sim,0.7974683544303798
+parcel,43664,JavaScript,Sim,0.7981072555205048
+htmx,43630,JavaScript,Sim,0.7987421383647799
+zx,43607,JavaScript,Sim,0.799373040752351
+awesome-react-components,43587,Sem informação,Sem informação,0.799373040752351
+TensorFlow-Examples,43534,Jupyter Notebook,Não,0.796875
+build-web-application-with-golang,43436,Go,Sim,0.7975077881619937
+babel,43424,TypeScript,Sim,0.7981366459627329
+Fooocus,43323,Python,Sim,0.7987616099071208
+retrofit,43321,HTML,Não,0.7962962962962963
+CppCoreGuidelines,43292,CSS,Não,0.7938461538461539
+discourse,43270,Ruby,Não,0.7914110429447853
+frontend-dev-bookmarks,43238,Sem informação,Sem informação,0.7914110429447853
+jadx,42886,Java,Sim,0.7920489296636085
+open-source-mac-os-apps,42826,Sem informação,Sem informação,0.7920489296636085
+awesome-java,42814,Sem informação,Sem informação,0.7920489296636085
+brew,42575,Ruby,Não,0.7896341463414634
+text-generation-webui,42574,Python,Sim,0.790273556231003
+react-use,42537,TypeScript,Sim,0.7909090909090909
+grpc,42474,C++,Sim,0.7915407854984894
+react-hook-form,42466,TypeScript,Sim,0.7921686746987951
+kubernetes-the-hard-way,42384,Sem informação,Sem informação,0.7921686746987951
+front-end-interview-handbook,42369,MDX,Não,0.7897897897897898
+lx-music-desktop,42369,TypeScript,Sim,0.7904191616766467
+Leaflet,42088,JavaScript,Sim,0.7910447761194029
+lazydocker,42024,Go,Sim,0.7916666666666666
+git-flight-rules,42009,Sem informação,Sem informação,0.7916666666666666
+Rocket.Chat,41985,TypeScript,Sim,0.7922848664688428
+vaultwarden,41932,Rust,Não,0.7899408284023669
+pm2,41929,JavaScript,Sim,0.7905604719764012
+dbeaver,41830,Java,Sim,0.7911764705882353
+awesome-cheatsheets,41666,JavaScript,Sim,0.7917888563049853
+Alamofire,41653,Swift,Não,0.7894736842105263
+edex-ui,41605,JavaScript,Sim,0.7900874635568513
+JeecgBoot,41582,Java,Sim,0.7906976744186046
+yarn,41493,JavaScript,Sim,0.7913043478260869
+monaco-editor,41487,JavaScript,Sim,0.791907514450867
+awesome-design-patterns,41327,Sem informação,Sem informação,0.791907514450867
+acme.sh,41226,Shell,Sim,0.792507204610951
+prisma,41220,TypeScript,Sim,0.7931034482758621
+LLaMA-Factory,41169,Python,Sim,0.7936962750716332
+FreeDomain,41106,HTML,Não,0.7914285714285715
+reactjs-interview-questions,41060,JavaScript,Sim,0.792022792022792
+vue2-elm,41044,Vue,Não,0.7897727272727273
+ChatGLM-6B,41024,Python,Sim,0.7903682719546742
+what-happens-when,40961,Sem informação,Sem informação,0.7903682719546742
+python-patterns,40952,Python,Sim,0.7909604519774012
+metabase,40901,Clojure,Não,0.7887323943661971
+GPT-SoVITS,40873,Python,Sim,0.7893258426966292
+pyenv,40813,Roff,Não,0.7871148459383753
+dubbo,40739,Java,Sim,0.7877094972067039
+odoo,40717,Python,Sim,0.7883008356545961
+styled-components,40676,TypeScript,Sim,0.7888888888888889
+spark,40573,Scala,Não,0.7867036011080333
+swiper,40544,JavaScript,Sim,0.787292817679558
+uv,40521,Rust,Não,0.7851239669421488
+nw.js,40491,JavaScript,Sim,0.7857142857142857
+uni-app,40426,JavaScript,Sim,0.7863013698630137
+diagrams,40313,Python,Sim,0.7868852459016393
+LLMs-from-scratch,40246,Jupyter Notebook,Não,0.784741144414169
+vuetify,40234,TypeScript,Sim,0.7853260869565217
+CPlusPlusThings,40222,C++,Sim,0.7859078590785907
+kong,40169,Lua,Não,0.7837837837837838
+stablediffusion,40146,Python,Sim,0.784366576819407
+ailearning,40139,Python,Sim,0.7849462365591398
+maybe,40103,Ruby,Não,0.7828418230563002
+sentry,40061,Python,Sim,0.7834224598930482
+ColossalAI,40045,Python,Sim,0.784
+hexo,39994,TypeScript,Sim,0.7845744680851063
+fastlane,39904,Ruby,Não,0.7824933687002652
+autogen,39844,Python,Sim,0.783068783068783
+black,39614,Python,Sim,0.783641160949868
+nvm-windows,39563,Go,Sim,0.7842105263157895
+nanoGPT,39474,Python,Sim,0.7847769028871391
+iina,39453,Swift,Não,0.7827225130890052
+cobra,39412,Go,Sim,0.783289817232376
+fanqiang,39207,Kotlin,Não,0.78125
+termux-app,39102,Java,Sim,0.7818181818181819
+llama_index,39095,Python,Sim,0.7823834196891192
+ClickHouse,39092,C++,Sim,0.7829457364341085
+cheat.sh,38967,Python,Sim,0.7835051546391752
+tldraw,38926,TypeScript,Sim,0.7840616966580977
+materialize,38868,JavaScript,Sim,0.7846153846153846
+airflow,38866,Python,Sim,0.7851662404092071
+Deep-Learning-Papers-Reading-Roadmap,38773,Python,Sim,0.7857142857142857
+tabler,38752,HTML,Não,0.7837150127226463
+php-src,38690,C,Sim,0.7842639593908629
+bert,38671,Python,Sim,0.7848101265822784
+vllm,38658,Python,Sim,0.7853535353535354
+esbuild,38581,Go,Sim,0.7858942065491183
+v2rayNG,38575,Kotlin,Não,0.7839195979899497
+chinese-independent-developer,38575,Sem informação,Sem informação,0.7839195979899497
+chakra-ui,38547,TypeScript,Sim,0.7844611528822055
+video.js,38435,JavaScript,Sim,0.785
+wrk,38428,C,Sim,0.7855361596009975
+cli,38324,Go,Sim,0.7860696517412935
+50projects50days,38247,CSS,Não,0.7841191066997518
+markitdown,38203,HTML,Não,0.7821782178217822
+Made-With-ML,38195,Jupyter Notebook,Não,0.7802469135802469
+ragflow,38185,TypeScript,Sim,0.7807881773399015
+anything-llm,38132,JavaScript,Sim,0.7813267813267813
+bevy,38021,Rust,Não,0.7794117647058824
+mitmproxy,37981,Python,Sim,0.7799511002444988
+English-level-up-tips,37952,HTML,Não,0.7780487804878049
+tidb,37947,Go,Sim,0.7785888077858881
+whisper.cpp,37898,C++,Sim,0.779126213592233
+styleguide,37862,HTML,Não,0.7772397094430993
+FastChat,37857,Python,Sim,0.7777777777777778
+TTS,37849,Python,Sim,0.7783132530120482
+zju-icicles,37836,HTML,Não,0.7764423076923077
+MPAndroidChart,37818,Java,Sim,0.7769784172661871
+typst,37729,Rust,Não,0.7751196172248804
+impress.js,37710,JavaScript,Sim,0.7756563245823389
+streamlit,37618,Python,Sim,0.7761904761904762
+phaser,37574,JavaScript,Sim,0.7767220902612827
+gorm,37553,Go,Sim,0.7772511848341233
+EasySpider,37552,JavaScript,Sim,0.7777777777777778
+coolify,37519,PHP,Sim,0.7783018867924528
+zig,37498,Zig,Não,0.7764705882352941
+vim,37491,Vim Script,Não,0.7746478873239436
+expo,37481,TypeScript,Sim,0.775175644028103
+awesome-compose,37469,HTML,Não,0.7733644859813084
+WeChatMsg,37392,Python,Sim,0.7738927738927739
+quivr,37341,Python,Sim,0.7744186046511627
+jellyfin,37325,C#,Sim,0.7749419953596288
+free,37301,Sem informação,Sem informação,0.7749419953596288
+Open-Assistant,37237,Python,Sim,0.7754629629629629
+TrafficMonitor,37211,C++,Sim,0.7759815242494227
+freecodecamp.cn,37179,CSS,Não,0.7741935483870968
+preact,37167,JavaScript,Sim,0.774712643678161
+memos,37136,Go,Sim,0.7752293577981652
+leveldb,37115,C++,Sim,0.7757437070938215
+tutorials,37021,Java,Sim,0.776255707762557
+bark,36994,Jupyter Notebook,Não,0.7744874715261959
+shellcheck,36953,Haskell,Não,0.7727272727272727
+jsoncrack.com,36945,TypeScript,Sim,0.7732426303854876
+python-cheatsheet,36873,Python,Sim,0.7737556561085973
+DeepSpeed,36872,Python,Sim,0.7742663656884876
+curl,36870,C,Sim,0.7747747747747747
+ant-design-pro,36818,TypeScript,Sim,0.7752808988764045
+interview_internal_reference,36794,Python,Sim,0.7757847533632287
+pure-bash-bible,36792,Shell,Sim,0.7762863534675615
+ultralytics,36783,Python,Sim,0.7767857142857143
+awesome-remote-job,36775,Sem informação,Sem informação,0.7767857142857143
+aria2,36722,C++,Sim,0.77728285077951
+freqtrade,36534,Python,Sim,0.7777777777777778
+tmux,36533,C,Sim,0.7782705099778271
+penpot,36532,Clojure,Não,0.7765486725663717
+istio,36504,Go,Sim,0.7770419426048565
+photoprism,36484,Go,Sim,0.7775330396475771
+GFPGAN,36341,Python,Sim,0.778021978021978
+novu,36309,TypeScript,Sim,0.7785087719298246
+JavaFamily,36290,Sem informação,Sem informação,0.7785087719298246
+Summer2025-Internships,36236,Sem informação,Sem informação,0.7785087719298246
+gradio,36218,Python,Sim,0.7789934354485777
+OpenBB,36212,Python,Sim,0.7794759825327511
+manifesto,36127,HTML,Não,0.7777777777777778
+AI-For-Beginners,36111,Jupyter Notebook,Não,0.7760869565217391
+aspnetcore,36107,C#,Sim,0.7765726681127982
+taro,36085,TypeScript,Sim,0.7770562770562771
+Files,36075,C#,Sim,0.7775377969762419
+v,36071,V,Não,0.7758620689655172
+trpc,36070,TypeScript,Sim,0.7763440860215054
+deeplearningbook-chinese,36067,TeX,Não,0.7746781115879828
+GitHubDaily,36051,Sem informação,Sem informação,0.7746781115879828
+tesseract.js,36029,JavaScript,Sim,0.7751605995717344
+wtfpython,36028,Python,Sim,0.7756410256410257
+arthas,35991,Java,Sim,0.7761194029850746
+ruff,35979,Rust,Não,0.774468085106383
+helix,35961,Rust,Não,0.772823779193206
+wtfjs,35949,JavaScript,Sim,0.7733050847457628
+pandoc,35919,Haskell,Não,0.7716701902748414
+og-aws,35886,Shell,Sim,0.7721518987341772
+DragGAN,35861,Python,Sim,0.7726315789473684
+lerna,35840,TypeScript,Sim,0.773109243697479
+MockingBird,35813,Python,Sim,0.7735849056603774
+devdocs,35770,Ruby,Não,0.7719665271966527
+appsmith,35718,TypeScript,Sim,0.7724425887265136
+insomnia,35691,JavaScript,Sim,0.7729166666666667
+zod,35670,TypeScript,Sim,0.7733887733887734
+fd,35631,Rust,Não,0.7717842323651453
+ray,35535,Python,Sim,0.772256728778468
+daisyui,35504,Svelte,Não,0.7706611570247934
+shadowsocks-android,35485,Kotlin,Não,0.7690721649484537
+hello-algorithm,35474,Java,Sim,0.7695473251028807
+googletest,35470,C++,Sim,0.7700205338809035
+interview,35440,C++,Sim,0.7704918032786885
+gym,35427,Python,Sim,0.7709611451942741
+sheetjs,35399,Sem informação,Sem informação,0.7709611451942741
+fullPage.js,35389,JavaScript,Sim,0.7714285714285715
+koa,35347,JavaScript,Sim,0.7718940936863544
+date-fns,35331,TypeScript,Sim,0.7723577235772358
+Flowise,35331,TypeScript,Sim,0.7728194726166329
+RSSHub,35301,TypeScript,Sim,0.7732793522267206
+spotube,35234,Dart,Não,0.7717171717171717
+lottie-android,35200,Java,Sim,0.7721774193548387
+nativefier,35084,TypeScript,Sim,0.772635814889336
+fiber,35063,Go,Sim,0.7730923694779116
+upscayl,35008,TypeScript,Sim,0.7735470941883767
+Awesome-Design-Tools,34988,JavaScript,Sim,0.774
+955.WLB,34984,Sem informação,Sem informação,0.774
+logseq,34984,Clojure,Não,0.7724550898203593
+lapce,34983,Rust,Não,0.7709163346613546
+hackathon-starter,34982,JavaScript,Sim,0.7713717693836978
+slidev,34968,TypeScript,Sim,0.7718253968253969
+google-research,34955,Jupyter Notebook,Não,0.7702970297029703
+Pake,34943,Rust,Não,0.7687747035573123
+awesome-react-native,34936,JavaScript,Sim,0.7692307692307693
+carbon,34907,JavaScript,Sim,0.7696850393700787
+typeorm,34894,TypeScript,Sim,0.7701375245579568
+metasploit-framework,34852,Ruby,Não,0.7686274509803922
+cli,34813,Python,Sim,0.7690802348336595
+chatgpt-on-wechat,34801,Python,Sim,0.76953125
+glide,34786,Java,Sim,0.7699805068226121
+halo,34780,Java,Sim,0.7704280155642024
+compose,34770,Go,Sim,0.7708737864077669
+ToolJet,34748,JavaScript,Sim,0.7713178294573644
+the-way-to-go_ZH_CN,34742,Go,Sim,0.7717601547388782
+ccxt,34672,Python,Sim,0.7722007722007722
+ChatTTS,34548,Python,Sim,0.7726396917148363
+vim-plug,34546,Vim Script,Não,0.7711538461538462
+system-design,34545,Sem informação,Sem informação,0.7711538461538462
+TaskMatrix,34540,Python,Sim,0.7715930902111324
+HanLP,34441,Python,Sim,0.7720306513409961
+node-v0.x-archive,34411,Sem informação,Sem informação,0.7720306513409961
+caffe,34228,C++,Sim,0.7724665391969407
+formik,34149,TypeScript,Sim,0.7729007633587787
+cal.com,34143,TypeScript,Sim,0.7733333333333333
+clipboard.js,34108,JavaScript,Sim,0.7737642585551331
+12306,34010,Python,Sim,0.7741935483870968
+awesome-javascript,33983,Sem informação,Sem informação,0.7741935483870968
+gold-miner,33949,Sem informação,Sem informação,0.7741935483870968
+nushell,33934,Rust,Não,0.7727272727272727
+marked,33897,TypeScript,Sim,0.7731568998109641
+spacedrive,33889,TypeScript,Sim,0.7735849056603774
+REKCARC-TSC-UHT,33862,HTML,Não,0.7721280602636534
+netty,33804,Java,Sim,0.7725563909774437
+awesome-shell,33775,Sem informação,Sem informação,0.7725563909774437
+jieba,33707,Python,Sim,0.7729831144465291
+react-beautiful-dnd,33668,JavaScript,Sim,0.7734082397003745
+shadowsocks,33602,Python,Sim,0.7738317757009345
+Langchain-Chatchat,33562,TypeScript,Sim,0.7742537313432836
+AndroidUtilCode,33455,Java,Sim,0.7746741154562383
+spring-boot-demo,33390,Java,Sim,0.775092936802974
+sqlmap,33359,Python,Sim,0.7755102040816326
+AFNetworking,33351,Objective-C,Não,0.774074074074074
+LeetCode-Go,33337,Go,Sim,0.7744916820702403
+brackets,33232,JavaScript,Sim,0.7749077490774908
+pytorch-image-models,33221,Python,Sim,0.7753222836095764
+XX-Net,33166,Python,Sim,0.7757352941176471
+framework,33149,PHP,Sim,0.7761467889908257
+husky,33119,JavaScript,Sim,0.7765567765567766
+windows,33118,Shell,Sim,0.7769652650822669
+faiss,33113,C++,Sim,0.7773722627737226
+easyexcel,33108,Java,Sim,0.7777777777777778
+gulp,33082,JavaScript,Sim,0.7781818181818182
+zxing,33067,Java,Sim,0.778584392014519
+fastify,33063,JavaScript,Sim,0.7789855072463768
+node,33052,Shell,Sim,0.779385171790235
+solid,33024,TypeScript,Sim,0.779783393501805
+immutable-js,33020,TypeScript,Sim,0.7801801801801802
+leetcode,33012,Java,Sim,0.7805755395683454
+docs,32999,MDX,Não,0.7791741472172352
+NewPipe,32973,Java,Sim,0.7795698924731183
+Coursera-ML-AndrewNg-Notes,32931,HTML,Não,0.778175313059034
+AgentGPT,32907,TypeScript,Sim,0.7785714285714286
+JavaScript,32887,JavaScript,Sim,0.7789661319073083
+ink-kit,32855,TypeScript,Sim,0.7793594306049823
+linux-command,32816,Markdown,Não,0.7779751332149201
+ijkplayer,32744,C,Sim,0.7783687943262412
+ShadowsocksX-NG,32635,Swift,Não,0.7769911504424779
+carbon-lang,32631,C++,Sim,0.7773851590106007
+poetry,32604,Python,Sim,0.7777777777777778
+milvus,32575,Go,Sim,0.778169014084507
+payload,32565,TypeScript,Sim,0.7785588752196837
+Python,32560,Python,Sim,0.7789473684210526
+engineering-blogs,32499,Ruby,Não,0.7775831873905429
+plane,32467,TypeScript,Sim,0.777972027972028
+harness,32460,Go,Sim,0.7783595113438045
+legado,32454,Kotlin,Não,0.7770034843205574
+awesome-awesomeness,32377,Ruby,Não,0.7756521739130435
+gpt-pilot,32376,Python,Sim,0.7760416666666666
+material-design-lite,32291,HTML,Não,0.7746967071057193
+zsh-autosuggestions,32279,Shell,Sim,0.7750865051903114
+portainer,32035,TypeScript,Sim,0.7754749568221071
+certbot,31941,Python,Sim,0.7758620689655172
+How-To-Ask-Questions-The-Smart-Way,31939,JavaScript,Sim,0.7762478485370051
+polars,31928,Rust,Não,0.7749140893470791
+openpose,31900,C++,Sim,0.7753001715265866
+run,31899,Sem informação,Sem informação,0.7753001715265866
+LLM101n,31860,Sem informação,Sem informação,0.7753001715265866
+HEU_KMS_Activator,31858,Sem informação,Sem informação,0.7753001715265866
+chatgpt-web,31834,Vue,Não,0.773972602739726
+beego,31833,Go,Sim,0.7743589743589744
+vault,31798,Go,Sim,0.7747440273037542
+my-tv,31779,C,Sim,0.7751277683134583
+swc,31701,Rust,Não,0.7738095238095238
+mattermost,31690,TypeScript,Sim,0.7741935483870968
+android-open-project,31678,Sem informação,Sem informação,0.7741935483870968
+shardeum,31648,TypeScript,Sim,0.7745762711864407
+modern-unix,31623,Sem informação,Sem informação,0.7745762711864407
+selenium,31623,Java,Sim,0.7749576988155669
+AnotherRedisDesktopManager,31570,JavaScript,Sim,0.7753378378378378
+chatbox,31511,TypeScript,Sim,0.7757166947723441
+ControlNet,31498,Python,Sim,0.7760942760942761
+RevokeMsgPatcher,31490,C#,Sim,0.7764705882352941
+graphql-engine,31362,TypeScript,Sim,0.7768456375838926
+jax,31353,Python,Sim,0.7772194304857621
+awesome-php,31337,Sem informação,Sem informação,0.7772194304857621
+awesome-docker,31325,Sem informação,Sem informação,0.7772194304857621
+nps,31281,Go,Sim,0.7775919732441472
+C-Plus-Plus,31263,C++,Sim,0.7779632721202003
+detectron2,31258,Python,Sim,0.7783333333333333
+yew,31247,Rust,Não,0.7770382695507487
+bruno,31236,JavaScript,Sim,0.7774086378737541
+jq,31230,C,Sim,0.7777777777777778
+serenity,31092,C++,Sim,0.7781456953642384
+learnGitBranching,31088,JavaScript,Sim,0.7785123966942149
+crawl4ai,31062,Python,Sim,0.7788778877887789
+swr,31055,TypeScript,Sim,0.7792421746293245
+rxjs,31027,TypeScript,Sim,0.7796052631578947
+fairseq,31020,Python,Sim,0.7799671592775042
+vimrc,31019,Vim Script,Não,0.7786885245901639
+OpenVoice,30992,Python,Sim,0.779050736497545
+html2canvas,30992,TypeScript,Sim,0.7794117647058824
+llvm-project,30988,LLVM,Não,0.7781402936378466
+remote-jobs,30976,JavaScript,Sim,0.7785016286644951
+MS-DOS,30957,Assembly,Não,0.7772357723577236
+spaCy,30957,Python,Sim,0.7775974025974026
+jQuery-File-Upload,30950,PHP,Sim,0.7779578606158833
+HowToLiveLonger,30947,Sem informação,Sem informação,0.7779578606158833
+unsloth,30925,Python,Sim,0.7783171521035599
+ShareX,30890,C#,Sim,0.778675282714055
+lottie-web,30888,JavaScript,Sim,0.7790322580645161
+Blog,30885,Sem informação,Sem informação,0.7790322580645161
+nacos,30868,Java,Sim,0.7793880837359098
+pnpm,30826,TypeScript,Sim,0.7797427652733119
+aseprite,30808,C++,Sim,0.7800963081861958
+pytorch-tutorial,30807,Python,Sim,0.780448717948718
+remix,30763,TypeScript,Sim,0.7808
+floating-ui,30686,TypeScript,Sim,0.7811501597444089
+etcher,30640,TypeScript,Sim,0.7814992025518341
+dotfiles,30584,Shell,Sim,0.7818471337579618
+p3c,30564,Kotlin,Não,0.78060413354531
+WxJava,30558,Java,Sim,0.780952380952381
+LocalAI,30533,Go,Sim,0.7812995245641838
+cockroach,30526,Go,Sim,0.7816455696202531
+outline,30522,TypeScript,Sim,0.7819905213270142
+libpku,30514,TeX,Não,0.7807570977917981
+echo,30493,Go,Sim,0.7811023622047244
+v2ray-core,30434,Go,Sim,0.7814465408805031
+slate,30388,TypeScript,Sim,0.7817896389324961
+spring-boot-examples,30374,Java,Sim,0.7821316614420063
+YesPlayMusic,30359,Vue,Não,0.7809076682316118
+linux-insides,30345,Python,Sim,0.78125
+lede,30338,C,Sim,0.781591263650546
+CyberChef,30311,JavaScript,Sim,0.7819314641744548
+rufus,30306,C,Sim,0.7822706065318819
+NeteaseCloudMusicApi,30305,Sem informação,Sem informação,0.7822706065318819
+mmdetection,30292,Python,Sim,0.782608695652174
+cline,30256,TypeScript,Sim,0.7829457364341085
+browser-use,30091,Python,Sim,0.7832817337461301
+Sortable,30071,JavaScript,Sim,0.7836166924265843
+calculator,30062,C++,Sim,0.7839506172839507
+symfony,30039,PHP,Sim,0.7842835130970724
+HEAD,30022,Sem informação,Sem informação,0.7842835130970724
+manim,30013,Python,Sim,0.7846153846153846
+chatbot-ui,30006,TypeScript,Sim,0.7849462365591398
+layui,29976,JavaScript,Sim,0.7852760736196319
+winutil,29959,PowerShell,Não,0.7840735068912711
+full-stack-fastapi-template,29949,TypeScript,Sim,0.7844036697247706
+awesome-cto,29948,Sem informação,Sem informação,0.7844036697247706
+qBittorrent,29943,C++,Sim,0.7847328244274809
+webtorrent,29938,JavaScript,Sim,0.7850609756097561
+interactive-coding-challenges,29935,Python,Sim,0.7853881278538812
+minikube,29935,Go,Sim,0.7857142857142857
+go-zero,29933,Go,Sim,0.7860394537177542
+dokku,29930,Shell,Sim,0.7863636363636364
+bulletproof-react,29928,TypeScript,Sim,0.7866868381240545
+refine,29925,TypeScript,Sim,0.7870090634441088
+tabby,29908,Rust,Não,0.7858220211161387
+sharp,29890,JavaScript,Sim,0.786144578313253
+stanford_alpaca,29830,Python,Sim,0.7864661654135339
+sequelize,29787,TypeScript,Sim,0.7867867867867868
+jsPDF,29771,JavaScript,Sim,0.7871064467766117
+vue-cli,29756,JavaScript,Sim,0.7874251497005988
+mpv,29728,C,Sim,0.7877428998505231
+foundation-sites,29719,HTML,Não,0.7865671641791044
+Real-ESRGAN,29696,Python,Sim,0.7868852459016393
+fabric.js,29660,JavaScript,Sim,0.7872023809523809
+Reactive-Resume,29648,TypeScript,Sim,0.787518573551263
+lossless-cut,29643,TypeScript,Sim,0.787833827893175
+bubbletea,29637,Go,Sim,0.7881481481481482
+union,29603,Rust,Não,0.7869822485207101
+Umi-OCR,29598,Python,Sim,0.7872968980797637
+leakcanary,29556,Kotlin,Não,0.7861356932153393
+editor.js,29553,TypeScript,Sim,0.7864506627393225
+AI-Expert-Roadmap,29552,JavaScript,Sim,0.7867647058823529
+influxdb,29527,Rust,Não,0.7856093979441997
+hutool,29523,Java,Sim,0.7859237536656891
+project-guidelines,29513,JavaScript,Sim,0.7862371888726208
+react-boilerplate,29511,JavaScript,Sim,0.7865497076023392
+uppy,29508,TypeScript,Sim,0.7868613138686131
+siyuan,29505,TypeScript,Sim,0.7871720116618076
+kafka,29491,Java,Sim,0.7874818049490538
+phantomjs,29484,C++,Sim,0.7877906976744186
+netron,29414,JavaScript,Sim,0.7880986937590712
+500lines,29407,JavaScript,Sim,0.7884057971014493
+stats,29391,Swift,Não,0.7872648335745297
+OpenAPI-Specification,29386,Markdown,Não,0.7861271676300579
+fabric,29385,Go,Sim,0.7864357864357865
+Mr.-Ranedeer-AI-Tutor,29361,Sem informação,Sem informação,0.7864357864357865
+backstage,29357,TypeScript,Sim,0.7867435158501441
+comprehensive-rust,29341,Rust,Não,0.7856115107913669
+particles.js,29335,JavaScript,Sim,0.7859195402298851
+Hover,29335,SCSS,Não,0.7847919655667145
+apollo,29332,Java,Sim,0.7851002865329513
+roop,29326,Python,Sim,0.7854077253218884
+servo,29310,Rust,Não,0.7842857142857143
+GPTs,29307,Sem informação,Sem informação,0.7842857142857143
+tqdm,29299,Python,Sim,0.7845934379457917
+standard,29260,JavaScript,Sim,0.7849002849002849
+awesome-macos-command-line,29252,Sem informação,Sem informação,0.7849002849002849
+es6features,29230,Sem informação,Sem informação,0.7849002849002849
+ruoyi-vue-pro,29228,Java,Sim,0.7852062588904695
+algo,29200,Jinja,Não,0.7840909090909091
+rocksdb,29163,C++,Sim,0.7843971631205674
+directus,29124,TypeScript,Sim,0.7847025495750708
+awesome-python-cn,29108,Makefile,Não,0.7835926449787836
+cheerio,29097,TypeScript,Sim,0.7838983050847458
+COVID-19,29088,Sem informação,Sem informação,0.7838983050847458
+paper-reading,29084,Sem informação,Sem informação,0.7838983050847458
+alpine,29060,HTML,Não,0.7827926657263752
+MonitorControl,29030,Swift,Não,0.7816901408450704
+pytorch-lightning,29014,Python,Sim,0.7819971870604782
+folly,28995,C++,Sim,0.7823033707865169
+data-engineering-zoomcamp,28984,Jupyter Notebook,Não,0.7812061711079944
+swift-algorithm-club,28953,Swift,Não,0.7801120448179272
+weekly,28939,JavaScript,Sim,0.7804195804195804
+CheatSheetSeries,28903,Python,Sim,0.7807262569832403
+tiptap,28870,TypeScript,Sim,0.7810320781032078
+numpy,28862,Python,Sim,0.7813370473537604
+Data-Science-For-Beginners,28841,Jupyter Notebook,Não,0.780250347705146
+k3s,28831,Go,Sim,0.7805555555555556
+composer,28829,PHP,Sim,0.7808599167822469
+canal,28818,Java,Sim,0.7811634349030471
+django-rest-framework,28813,Python,Sim,0.7814661134163209
+croc,28795,Go,Sim,0.7817679558011049
+css-protips,28790,Sem informação,Sem informação,0.7817679558011049
+docsify,28773,JavaScript,Sim,0.7820689655172414
+surrealdb,28730,Rust,Não,0.78099173553719
+todomvc,28728,JavaScript,Sim,0.781292984869326
+lux,28707,Go,Sim,0.7815934065934066
+lighthouse,28701,JavaScript,Sim,0.7818930041152263
+consul,28692,Go,Sim,0.7821917808219178
+postcss,28664,TypeScript,Sim,0.7824897400820794
+python-guide,28660,Batchfile,Não,0.7814207650273224
+server,28655,PHP,Sim,0.781718963165075
+mediapipe,28645,C++,Sim,0.782016348773842
+CasaOS,28607,Go,Sim,0.782312925170068
+SpringAll,28604,Java,Sim,0.782608695652174
+slick,28599,JavaScript,Sim,0.7829036635006784
+linkedin-skill-assessments-quizzes,28575,Sem informação,Sem informação,0.7829036635006784
+k9s,28555,Go,Sim,0.7831978319783198
+Hello-Python,28515,Python,Sim,0.7834912043301759
+react-spring,28468,TypeScript,Sim,0.7837837837837838
+vuex,28456,JavaScript,Sim,0.7840755735492577
+handson-ml2,28429,Jupyter Notebook,Não,0.7830188679245284
+machine-learning-for-software-engineers,28362,Sem informação,Sem informação,0.7830188679245284
+llama3,28351,Python,Sim,0.7833109017496636
+android_guides,28347,Sem informação,Sem informação,0.7833109017496636
+plyr,28328,JavaScript,Sim,0.7836021505376344
+Clone-Wars,28319,Sem informação,Sem informação,0.7836021505376344
+xxl-job,28313,Java,Sim,0.7838926174496644
+Free-Certifications,28282,Sem informação,Sem informação,0.7838926174496644
+spring-cloud-alibaba,28237,Java,Sim,0.7841823056300268
+async,28224,JavaScript,Sim,0.784471218206158
+UTM,28218,Swift,Não,0.7834224598930482
+react-three-fiber,28217,TypeScript,Sim,0.7837116154873164
+puter,28157,JavaScript,Sim,0.784
+ladybird,28123,C++,Sim,0.7842876165113183
+the-super-tiny-compiler,28119,JavaScript,Sim,0.7845744680851063
+JavaScript30,28107,HTML,Não,0.7835325365205843
+backbone,28103,JavaScript,Sim,0.7838196286472149
+immer,28088,JavaScript,Sim,0.7841059602649006
+trilium,28086,JavaScript,Sim,0.7843915343915344
+druid,28069,Java,Sim,0.7846763540290621
+tinygrad,28065,Python,Sim,0.7849604221635884
+ChatGPT,28058,Python,Sim,0.7852437417654808
+DevToys,28044,C#,Sim,0.7855263157894737
+tuning_playbook,28023,Sem informação,Sem informação,0.7855263157894737
+fish-shell,28018,Rust,Não,0.7844940867279895
+Complete-Python-3-Bootcamp,28000,Jupyter Notebook,Não,0.7834645669291339
+nginxconfig.io,27975,JavaScript,Sim,0.783748361730013
+cobalt,27970,Svelte,Não,0.7827225130890052
+tokio,27963,Rust,Não,0.7816993464052288
+reverse-interview,27908,Sem informação,Sem informação,0.7816993464052288
+filebrowser,27907,Go,Sim,0.7819843342036553
+stb,27897,C,Sim,0.7822685788787483
+data-science-ipython-notebooks,27876,Python,Sim,0.7825520833333334
+viper,27876,Go,Sim,0.7828348504551366
+os-tutorial,27849,C,Sim,0.7831168831168831
+react-select,27827,TypeScript,Sim,0.7833981841763943
+xstate,27821,TypeScript,Sim,0.783678756476684
+mantine,27819,TypeScript,Sim,0.7839586028460543
+glances,27762,Python,Sim,0.7842377260981912
+cursor,27756,Sem informação,Sem informação,0.7842377260981912
+waifu2x,27752,Lua,Não,0.7832258064516129
+xyflow,27751,TypeScript,Sim,0.7835051546391752
+medusa,27740,TypeScript,Sim,0.7837837837837838
+Charts,27738,Swift,Não,0.7827763496143959
+mobx,27735,TypeScript,Sim,0.7830551989730423
+applied-ml,27716,Sem informação,Sem informação,0.7830551989730423
+GPT_API_free,27684,Python,Sim,0.7833333333333333
+restic,27669,Go,Sim,0.7836107554417413
+ink,27650,TypeScript,Sim,0.7838874680306905
+90DaysOfDevOps,27650,Shell,Sim,0.7841634738186463
+DeepFaceLive,27644,Python,Sim,0.7844387755102041
+jan,27640,TypeScript,Sim,0.7847133757961784
+aider,27619,Python,Sim,0.7849872773536896
+diffusers,27595,Python,Sim,0.7852604828462516
+vhr,27593,Java,Sim,0.7855329949238579
+gitbook,27566,TypeScript,Sim,0.7858048162230672
+hosts,27516,Python,Sim,0.7860759493670886
+yapi,27497,JavaScript,Sim,0.786346396965866
+helm,27476,Go,Sim,0.7866161616161617
+Daily-Interview-Question,27452,JavaScript,Sim,0.7868852459016393
+CLIP,27447,Jupyter Notebook,Não,0.7858942065491183
+textual,27439,Python,Sim,0.7861635220125787
+ResumeSample,27421,Sem informação,Sem informação,0.7861635220125787
+python-fire,27412,Python,Sim,0.7864321608040201
+underscore,27377,JavaScript,Sim,0.7867001254705144
+vnpy,27377,Python,Sim,0.7869674185463659
+motion,27358,TypeScript,Sim,0.7872340425531915
+Python-programming-exercises,27303,Sem informação,Sem informação,0.7872340425531915
+aos,27273,JavaScript,Sim,0.7875
+Xray-core,27272,Go,Sim,0.787765293383271
+weui,27256,HTML,Não,0.786783042394015
+mindsdb,27231,Python,Sim,0.7870485678704857
+Jobs_Applier_AI_Agent_AIHawk,27215,Python,Sim,0.7873134328358209
+TrackersListCollection,27202,Sem informação,Sem informação,0.7873134328358209
+Probabilistic-Programming-and-Bayesian-Methods-for-Hackers,27201,Jupyter Notebook,Não,0.7863354037267081
+Retrieval-based-Voice-Conversion-WebUI,27156,Python,Sim,0.7866004962779156
+dragonfly,27151,C++,Sim,0.7868649318463445
+dnSpy,27113,C#,Sim,0.7871287128712872
+it-tools,27107,Vue,Não,0.7861557478368356
+mongoose,27102,JavaScript,Sim,0.7864197530864198
+awesome-sysadmin,27101,Sem informação,Sem informação,0.7864197530864198
+JCSprout,27094,Java,Sim,0.7866831072749692
+firecracker,27085,Rust,Não,0.7857142857142857
+ghostty,27059,Zig,Não,0.7847478474784748
+commander.js,27058,JavaScript,Sim,0.785012285012285
+Tvlist-awesome-m3u-m3u8,27054,Sem informação,Sem informação,0.785012285012285
+AdGuardHome,27047,Go,Sim,0.7852760736196319
+turborepo,27024,Rust,Não,0.7843137254901961
+Web,27004,Sem informação,Sem informação,0.7843137254901961
+python-telegram-bot,26991,Python,Sim,0.784577723378213
+tdesktop,26975,C++,Sim,0.784841075794621
+legacy-homebrew,26962,Sem informação,Sem informação,0.784841075794621
+codemirror5,26954,JavaScript,Sim,0.7851037851037851
+swagger-ui,26950,JavaScript,Sim,0.7853658536585366
+redash,26937,Python,Sim,0.7856272838002436
+coder2gwy,26904,Sem informação,Sem informação,0.7856272838002436
+wails,26868,Go,Sim,0.7858880778588808
+crewAI,26861,Python,Sim,0.7861482381530984
+ace,26861,JavaScript,Sim,0.7864077669902912
+rethinkdb,26850,C++,Sim,0.7866666666666666
+Avalonia,26833,C#,Sim,0.7869249394673123
+kit,26827,Go,Sim,0.7871825876662636
+angular-cli,26826,TypeScript,Sim,0.7874396135265701
+headlessui,26807,TypeScript,Sim,0.7876960193003619
+mongo,26795,C++,Sim,0.7879518072289157
+Faker,26795,PHP,Sim,0.7882069795427196
+rust-course,26791,Rust,Não,0.7872596153846154
+k6,26785,Go,Sim,0.787515006002401
+vue-vben-admin,26762,Vue,Não,0.7865707434052758
+gitflow,26752,Shell,Sim,0.7868263473053893
+taichi,26749,C++,Sim,0.7870813397129187
+hangzhou_house_knowledge,26739,CSS,Não,0.7861409796893668
+openssl,26726,C,Sim,0.7863961813842482
+fastai,26648,Jupyter Notebook,Não,0.7854588796185935
+data-engineer-handbook,26634,Jupyter Notebook,Não,0.7845238095238095
+firecrawl,26625,TypeScript,Sim,0.7847800237812128
+anoma,26611,Elixir,Não,0.7838479809976246
+xgboost,26610,C++,Sim,0.7841043890865955
+duckdb,26609,C++,Sim,0.7843601895734598
+react-virtualized,26608,JavaScript,Sim,0.7846153846153846
+so-vits-svc,26563,Python,Sim,0.7848699763593381
+Rectangle,26504,Swift,Não,0.7839433293978748
+vagrant,26490,Ruby,Não,0.7830188679245284
+30-Days-Of-React,26476,JavaScript,Sim,0.7832744405182568
+nodemon,26458,JavaScript,Sim,0.7835294117647059
+cascadia-code,26445,Python,Sim,0.7837837837837838
+create-t3-app,26395,TypeScript,Sim,0.784037558685446
+spleeter,26392,Python,Sim,0.7842907385697538
+srs,26392,C++,Sim,0.7845433255269321
+drizzle-orm,26390,TypeScript,Sim,0.7847953216374269
+vscodium,26388,Shell,Sim,0.7850467289719626
+kitty,26364,Python,Sim,0.7852975495915986
+the_silver_searcher,26359,C,Sim,0.7855477855477856
+GoodbyeDPI,26356,C,Sim,0.7857974388824214
+khoj,26314,Python,Sim,0.786046511627907
+Detectron,26301,Python,Sim,0.7862950058072009
+quasar,26277,JavaScript,Sim,0.7865429234338747
+miaosha,26255,Java,Sim,0.7867902665121669
+nprogress,26247,JavaScript,Sim,0.7870370370370371
+ChatDev,26208,Python,Sim,0.7872832369942196
+cmder,26185,C++,Sim,0.7875288683602771
+emscripten,26181,C++,Sim,0.7877739331026529
+awesome-electron,26120,Sem informação,Sem informação,0.7877739331026529
+Signal-Android,26113,Kotlin,Não,0.7868663594470046
+jumpserver,26101,Python,Sim,0.7871116225546605
+MinerU,26077,Python,Sim,0.7873563218390804
+fastText,26072,HTML,Não,0.7864523536165328
+nginx,26057,C,Sim,0.786697247706422
+ExplorerPatcher,26050,C,Sim,0.7869415807560137
+lottie-ios,26044,Swift,Não,0.7860411899313501
+darknet,26023,C,Sim,0.7862857142857143
+next-auth,26007,TypeScript,Sim,0.7865296803652968
+awesome-vscode,25998,JavaScript,Sim,0.7867730900798175
+hacker-laws,25953,Shell,Sim,0.7870159453302962
+select2,25949,JavaScript,Sim,0.7872582480091013
+ItChat,25944,Python,Sim,0.7875
+go-patterns,25919,Go,Sim,0.7877412031782066
+DeepSpeech,25896,C++,Sim,0.7879818594104309
+fonts,25894,Shell,Sim,0.7882219705549264
+table,25833,TypeScript,Sim,0.7884615384615384
+everyone-can-use-english,25825,TypeScript,Sim,0.7887005649717514
+refined-github,25810,TypeScript,Sim,0.7889390519187359
+Telegram,25808,Java,Sim,0.7891770011273957
+fyne,25800,Go,Sim,0.7894144144144144
+setup-ipsec-vpn,25798,Shell,Sim,0.7896512935883014
+fastjson,25778,Java,Sim,0.7898876404494382
+awesome-datascience,25771,Sem informação,Sem informação,0.7898876404494382
+fetch,25766,JavaScript,Sim,0.7901234567901234
+iced,25728,Rust,Não,0.7892376681614349
+Modernizr,25716,JavaScript,Sim,0.7894736842105263
+awesome-actions,25712,Sem informação,Sem informação,0.7894736842105263
+discord.js,25706,TypeScript,Sim,0.7897091722595079
+fe-interview,25702,JavaScript,Sim,0.7899441340782123
