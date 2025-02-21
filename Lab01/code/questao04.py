@@ -94,14 +94,18 @@ while continuaLoop:
       continuaLoop = False
       loop = 1
       for valor in repos:
+        dados = [valor["name"], valor["stargazerCount"], "Sem dados", "Sem dados", "Sem dados"]
         print(f"{str(loop)}º Repositório mais popular do GitHub:")
         loop+=1
         print(valor)
         if valor["latestRelease"] is not None:
-          dataCriacao = datetime.strptime(valor["latestRelease"]["publishedAt"] , f"%Y-%m-%dT%H:%M:%SZ")
-          idade = agora - dataCriacao
-          temposDesdeUltimaRelease.append(idade.days)
-          linhasDaPlanilha.append([valor["name"], valor["stargazerCount"], valor["latestRelease"]["publishedAt"], idade, statistics.median(temposDesdeUltimaRelease)])
+          ultimoLancamento = datetime.strptime(valor["latestRelease"]["publishedAt"] , f"%Y-%m-%dT%H:%M:%SZ")
+          tempoDesdeUltimoLancamento = agora - ultimoLancamento
+          temposDesdeUltimaRelease.append(tempoDesdeUltimoLancamento.days)
+          dados[2] = valor["latestRelease"]["publishedAt"]
+          dados[3] = tempoDesdeUltimoLancamento.days
+          dados[4] = statistics.median(temposDesdeUltimaRelease)
+        linhasDaPlanilha.append(dados)
       print(f"Lista das quantidades de dias desde a última release: {temposDesdeUltimaRelease}")
       print(f"Quantidade de repositórios populares que lançaram releases: {len(temposDesdeUltimaRelease)}")
       print(f"Mediana da quantidade de dias desde a última release: {statistics.median(temposDesdeUltimaRelease)}")
