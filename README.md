@@ -4,7 +4,7 @@
 
 Este repositório tem como objetivo armazenar as atividades desenvolvidas na disciplina de "Laboratório de Experimentação de Software". 
 Esta se baseia no consumo da API do GitHub usando GraphQL para a obtenção de dados e informações referentes a repositórios.
-A disciplina é dividida em 5 trabalhos entitulados "labs", a serem realizados ao longo do semestre letivo. Cada um deles é dividido em sprints de 2 ou 3 semanas.
+A disciplina é dividida em 5 trabalhos entitulados "labs", a serem realizados ao longo do semestre letivo. Cada um deles é dividido em sprints de 1 semana, totalizando 2 ou 3 sprints por lab.
 
 No LAB 01, são buscadas informações sobre os 1000 repositórios mais populares do GitHub, tais quais: idade, contribuições externas, releases, atualizações, linguagem e fechamento de issues.
 Os scripts são escritos de forma que as informações desejadas são recuperadas da API, exportadas em planilhas, os cálculos devidos são realizados e os resultados são mostrados de forma visual.
