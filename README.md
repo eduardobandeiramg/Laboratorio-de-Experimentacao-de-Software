@@ -7,6 +7,6 @@ Esta se baseia no consumo da [API do GitHub usando GraphQL](https://docs.github.
 A disciplina é dividida em 5 trabalhos entitulados "labs", a serem realizados ao longo do semestre letivo. Cada um deles é dividido em 2 ou 3 sprints, sendo as sprints semanais.
 
 No LAB 01, são buscados dados sobre os 1000 repositórios mais populares do GitHub, tais quais: idade, contribuições externas, releases, atualizações, linguagem e fechamento de issues.
-Os scripts são escritos de forma que as informações desejadas são recuperadas da API, exportadas em planilhas, os cálculos devidos são realizados e os resultados são mostrados de forma visual.
+Os scripts são escritos de forma que as informações desejadas são recuperadas da API, os cálculos devidos são realizados e os resultados são exportados para planilhas e gráficos.
 
 No LAB 02, ...
