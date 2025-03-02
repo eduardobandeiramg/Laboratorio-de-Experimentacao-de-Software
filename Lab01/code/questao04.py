@@ -2,6 +2,9 @@ import requests
 from datetime import datetime
 import statistics
 import csv
+import matplotlib.pylab as plt
+import seaborn as sns
+import time
 
 # Definindo a função para requisição:
 def fazerQuery(estrelas):
@@ -59,8 +62,6 @@ temposDesdeUltimaRelease = []
 # Criando variaveis de controle dos loops:
 continuaLoop = True
 loopDeContagem = True
-# Criando lista que armazenará os totais de releases:
-releases = []
 # Criando variavel para armazenar localizacao do ultimo item:
 cursorfinal = ""
 # Definindo numero alto de estrelas:
@@ -73,6 +74,7 @@ while continuaLoop:
   loopDeContagem = True
   # Criando lista para armazenar repositorios:
   repos = []
+  # time.sleep(2)
   resposta = fazerQuery(qtdEstrelas)
   if resposta.status_code == 200:
     respostaRequisicao = resposta.json()
@@ -85,6 +87,7 @@ while continuaLoop:
         loopDeContagem = False
         print("Nao tem proxima pagina")
       else:
+        time.sleep(2)
         cursorfinal = respostaRequisicao["data"]["search"]["pageInfo"]["endCursor"]
         resposta = fazerQueryComPaginacao(qtdEstrelas , cursorfinal)
         respostaRequisicao = resposta.json()
@@ -109,8 +112,28 @@ while continuaLoop:
       print(f"Lista das quantidades de dias desde a última release: {temposDesdeUltimaRelease}")
       print(f"Quantidade de repositórios populares que lançaram releases: {len(temposDesdeUltimaRelease)}")
       print(f"Mediana da quantidade de dias desde a última release: {statistics.median(temposDesdeUltimaRelease)}")
+      # Gerando a planilha com os dados obtidos:
       with open("questao04.csv", mode="w", newline="", encoding="utf-8") as arquivo:
         csv.writer(arquivo).writerows(linhasDaPlanilha)
+      # Gerando o gráfico com os dados obtidos:
+      bins = [0, 30, 60, 90, 120, 180, 360, 999999]
+      plt.hist(temposDesdeUltimaRelease, bins= 50, color='skyblue', edgecolor='black')
+      plt.title('Distribuição de dias desde última release')
+      plt.xlabel('Dias desde última release')
+      plt.ylabel('Frequência')
+      plt.show()
+      # Gerando o gráfico com curva de distribuição:
+      sns.histplot(temposDesdeUltimaRelease, kde=True, bins=50)
+      plt.title('Distribuição de dias desde última release')
+      plt.xlabel('Dias desde última release')
+      plt.ylabel('Frequência')
+      plt.show()
+      # Gerando o gráfico boxplot:
+      plt.boxplot(temposDesdeUltimaRelease)
+      plt.title('Distribuição de dias desde última release')
+      plt.xlabel("Dias desde última release")
+      plt.ylabel("Frequência")
+      plt.show()
   else:
     print("Erro ao acessar API do GitHub")
     print("Código do erro:")

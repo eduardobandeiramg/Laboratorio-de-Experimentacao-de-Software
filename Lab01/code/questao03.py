@@ -2,6 +2,9 @@ import requests
 from datetime import datetime
 import statistics
 import csv
+import matplotlib.pylab as plt
+import seaborn as sns
+import time
 
 # Definindo a função para requisição:
 def fazerQuery(estrelas):
@@ -70,6 +73,7 @@ while continuaLoop:
   loopDeContagem = True
   # Criando lista para armazenar repositorios:
   repos = []
+  time.sleep(2)
   resposta = fazerQuery(qtdEstrelas)
   if resposta.status_code == 200:
     respostaRequisicao = resposta.json()
@@ -82,6 +86,7 @@ while continuaLoop:
         loopDeContagem = False
         print("Nao tem proxima pagina")
       else:
+        time.sleep(2)
         cursorfinal = respostaRequisicao["data"]["search"]["pageInfo"]["endCursor"]
         resposta = fazerQueryComPaginacao(qtdEstrelas , cursorfinal)
         respostaRequisicao = resposta.json()
@@ -103,8 +108,27 @@ while continuaLoop:
         linhasDaPlanilha.append([valor["name"], valor["stargazerCount"], release, statistics.median(releases)])
       print(f"Lista das quantidades totais de releases: {releases}")
       print(f"Mediana das quantidades totais de releases: {statistics.median(releases)}")
+      # Gerando a planilha com os dados obtidos:
       with open("questao03.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
         csv.writer(arquivo).writerows(linhasDaPlanilha)
+      # Gerando o gráfico com os dados obtidos:
+      plt.hist(releases, bins=16, color='skyblue', edgecolor='black')
+      plt.title('Distribuição das quantidades totais de releases lançadas')
+      plt.xlabel('Releases lançadas')
+      plt.ylabel('Frequência')
+      plt.show()
+      # Gerando o gráfico com curva de distribuição:
+      sns.histplot(releases, kde=True)
+      plt.title('Distribuição das quantidades totais de releases lançadas')
+      plt.xlabel('Releases lançadas')
+      plt.ylabel('Frequência')
+      plt.show()
+      # Gerando o gráfico boxplot:
+      plt.boxplot(releases)
+      plt.title('Distribuição das quantidades de releases lançadas')
+      plt.xlabel("Releases lançadas")
+      plt.ylabel("Frequência")
+      plt.show()
   else:
     print("Erro ao acessar API do GitHub")
     print("Código do erro:")
