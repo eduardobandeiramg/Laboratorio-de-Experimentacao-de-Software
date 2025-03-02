@@ -1,7 +1,9 @@
 import requests
 from datetime import datetime
-import statistics
 import csv
+import matplotlib.pyplot as plt
+import seaborn as sns
+import time
 
 # Definindo a função para requisição:
 def fazerQuery(estrelas):
@@ -83,6 +85,7 @@ while continuaLoop:
         loopDeContagem = False
         print("Nao tem proxima pagina")
       else:
+        time.sleep(2)
         cursorfinal = respostaRequisicao["data"]["search"]["pageInfo"]["endCursor"]
         resposta = fazerQueryComPaginacao(qtdEstrelas , cursorfinal)
         respostaRequisicao = resposta.json()
@@ -108,9 +111,16 @@ while continuaLoop:
         if len(contemLinguagemPopular) > 0:
           dados[4] = contemLinguagemPopular.count(True)/len(contemLinguagemPopular)
         linhasDaPlanilha.append(dados)
+      # Gerando a planilha com os resultados obtidos:
       with open("questao05.csv", mode="w", newline="", encoding="utf-8") as arquivo:
         csv.writer(arquivo).writerows(linhasDaPlanilha)
       print(f"{(contemLinguagemPopular.count(True)) / len(contemLinguagemPopular) * 100}% dos repositórios mais populares têm como linguagem principal alguma das 10 linguagens mais populares do GitHub")
+      # Gerando o gráfico com os dados obtidos:
+      plt.bar(["Sim", "Não", "Sem dados"], [contemLinguagemPopular.count(True), contemLinguagemPopular.count(False), 1000-contemLinguagemPopular.count(True)-contemLinguagemPopular.count(False)], color=["green", "red" , "yellow"])
+      plt.title("Repositório tem como linguagem popular alguma das top-10?")
+      plt.xlabel("Resposta")
+      plt.ylabel("Frequência")
+      plt.show()
   else:
     print("Erro ao acessar API do GitHub")
     print("Código do erro:")
