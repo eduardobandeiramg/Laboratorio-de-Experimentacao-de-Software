@@ -2,6 +2,7 @@ import requests
 from datetime import datetime
 import statistics
 import csv
+import matplotlib.pylab as plt
 
 # Definindo a função para requisição:
 def fazerQuery(estrelas):

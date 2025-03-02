@@ -2,6 +2,9 @@ import requests
 from datetime import datetime
 import statistics
 import csv
+import matplotlib.pyplot as plt
+import seaborn as sns
+import time
 
 # Definindo a função para requisição:
 def fazerQuery(estrelas):
@@ -38,7 +41,6 @@ def fazerQueryComPaginacao(estrelas , aPartirDe):
                 ... on Repository {{
                     name
                     stargazerCount
-                    url
                     createdAt
                 }}
             }}
@@ -63,13 +65,14 @@ cursorfinal = ""
 # Definindo numero alto de estrelas:
 qtdEstrelas = 420000
 # Criando lista de linhas para o csv:
-linhasDaPlanilha = [["Repositório", "Estrelas", "Criado em", "Idade em dias", "Mediana"]]
+linhasDaPlanilha = [["Repositório", "Estrelas", "Criado em", "Idade em anos", "Mediana"]]
 
 while continuaLoop:
   # Reinicializando loop de contagem:
   loopDeContagem = True
   # Criando lista para armazenar repositorios:
   repos = []
+  time.sleep(2)
   resposta = fazerQuery(qtdEstrelas)
   if resposta.status_code == 200:
     respostaRequisicao = resposta.json()
@@ -82,6 +85,7 @@ while continuaLoop:
         loopDeContagem = False
         print("Nao tem proxima pagina")
       else:
+        time.sleep(2)
         cursorfinal = respostaRequisicao["data"]["search"]["pageInfo"]["endCursor"]
         resposta = fazerQueryComPaginacao(qtdEstrelas , cursorfinal)
         respostaRequisicao = resposta.json()
@@ -96,12 +100,27 @@ while continuaLoop:
         print(valor)
         dataCriacao = datetime.strptime(valor["createdAt"] , f"%Y-%m-%dT%H:%M:%SZ")
         idade = agora - dataCriacao
-        idades.append(idade.days)
+        idades.append(idade.days/365)
         linhasDaPlanilha.append([valor["name"], valor["stargazerCount"], valor["createdAt"], idade , statistics.median(idades)])
       print(f"Lista das idades: {idades}")
-      print(f"Mediana das idades: {statistics.median(idades)} dias")
+      print(f"Mediana das idades: {statistics.median(idades)} anos")
+      # Gerando a planilha com os dados obtidos:
       with open("questao01.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
         csv.writer(arquivo).writerows(linhasDaPlanilha)
+      # Gerando o gráfico com os dados obtidos:
+      #plt.hist(idades, bins=16, color='skyblue', edgecolor='black' , )
+      sns.histplot(idades, kde=True)
+      plt.title('Distribuição das "idades" dos repositórios em anos')
+      plt.xlabel('Idades')
+      plt.ylabel('Frequência')
+      plt.show()
+    # Gerando o gráfico boxplot:
+      plt.boxplot(idades)
+      plt.title('Distribuição das "idades" dos repositórios em anos')
+      plt.xlabel("Idades")
+      plt.ylabel("Frequência")
+      plt.show()
+
   else:
     print("Erro ao acessar API do GitHub")
     print("Descrição do erro:")
