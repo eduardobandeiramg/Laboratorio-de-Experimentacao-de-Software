@@ -3,6 +3,8 @@ from datetime import datetime
 import statistics
 import csv
 import matplotlib.pylab as plt
+import seaborn as sns
+import time
 
 # Definindo a função para requisição:
 def fazerQuery(estrelas):
@@ -71,6 +73,7 @@ while continuaLoop:
   loopDeContagem = True
   # Criando lista para armazenar repositorios:
   repos = []
+  time.sleep(2)
   resposta = fazerQuery(qtdEstrelas)
   if resposta.status_code == 200:
     respostaRequisicao = resposta.json()
@@ -83,6 +86,7 @@ while continuaLoop:
         loopDeContagem = False
         print("Nao tem proxima pagina")
       else:
+        time.sleep(2)
         cursorfinal = respostaRequisicao["data"]["search"]["pageInfo"]["endCursor"]
         resposta = fazerQueryComPaginacao(qtdEstrelas , cursorfinal)
         respostaRequisicao = resposta.json()
@@ -99,8 +103,22 @@ while continuaLoop:
         linhasDaPlanilha.append([valor["name"], valor["stargazerCount"], valor["pullRequests"]["totalCount"], statistics.median(pullRequests)])
       print(f"Lista das quantidades de pull requests aceitos: {pullRequests}")
       print(f"Mediana dos pull requests aceitos: {statistics.median(pullRequests)}")
+      # Gerando a planilha com os dados obtidos:
       with open("questao02.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
         csv.writer(arquivo).writerows(linhasDaPlanilha)
+      # Gerando o gráfico com os dados obtidos:
+      #plt.hist(idades, bins=16, color='skyblue', edgecolor='black' , )
+      sns.histplot(pullRequests, kde=True)
+      plt.title('Distribuição das quantidades de pull requests aceitas')
+      plt.xlabel('Pull requests aceitas')
+      plt.ylabel('Frequência')
+      plt.show()
+    # Gerando o gráfico boxplot:
+      plt.boxplot(pullRequests)
+      plt.title('Distribuição das quantidades de pull requests aceitas')
+      plt.xlabel("Pull requests aceitas")
+      plt.ylabel("Frequência")
+      plt.show()
   else:
     print("Erro ao acessar API do GitHub")
     print("Descrição do erro:")
