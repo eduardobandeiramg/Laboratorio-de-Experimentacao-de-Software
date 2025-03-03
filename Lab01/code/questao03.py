@@ -117,6 +117,12 @@ while continuaLoop:
       plt.xlabel('Releases lançadas')
       plt.ylabel('Frequência')
       plt.show()
+      # Gerando o zoom do grafico de dispersão:
+      plt.hist(releases, bins= [0,5,10,15,20,25,30,40,50,100,150,200], color='skyblue', edgecolor='black')
+      plt.title('Distribuição das quantidades totais de releases lançadas')
+      plt.xlabel('Releases lançadas')
+      plt.ylabel('Frequência')
+      plt.show()
       # Gerando o gráfico com curva de distribuição:
       sns.histplot(releases, kde=True)
       plt.title('Distribuição das quantidades totais de releases lançadas')

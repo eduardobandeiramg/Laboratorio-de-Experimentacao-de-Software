@@ -2,6 +2,9 @@ import requests
 from datetime import datetime
 import statistics
 import csv
+import matplotlib.pyplot as plt
+import seaborn as sns
+import time
 
 # Definindo a função para requisição:
 def fazerQuery(estrelas):
@@ -76,9 +79,11 @@ while continuaLoop:
   loopDeContagem = True
   # Criando lista para armazenar repositorios:
   repos = []
+  time.sleep(2)
   resposta = fazerQuery(qtdEstrelas)
   if resposta.status_code == 200:
     respostaRequisicao = resposta.json()
+    print(f"resposta da requisicao: {resposta.headers}")
     print(f"{len(respostaRequisicao["data"]["search"]["nodes"])} REPOSITÓRIOS NA PRIMEIRA PAGINA")
     while loopDeContagem:
       if len(respostaRequisicao["data"]["search"]["nodes"]) > 0:
@@ -88,9 +93,12 @@ while continuaLoop:
         loopDeContagem = False
         print("Nao tem proxima pagina")
       else:
+        time.sleep(2)
         cursorfinal = respostaRequisicao["data"]["search"]["pageInfo"]["endCursor"]
         resposta = fazerQueryComPaginacao(qtdEstrelas , cursorfinal)
         respostaRequisicao = resposta.json()
+        print(f"resposta da requisicao: {resposta.headers}")
+
     if len(repos) < 1000:
       qtdEstrelas -= 5000
     else:
@@ -110,8 +118,31 @@ while continuaLoop:
         dados[5] = statistics.median(listaDeRazoes)
         linhasDaPlanilha.append(dados)
       print(f"Mediana das razões entre issues fechadas e issues totais dos 1000 repositórios mais populares do GitHub: {statistics.median(listaDeRazoes)}")
+      # Gerando a planilha com os resultados obtidos:
       with open("questao06.csv", mode="w", newline="", encoding="utf-8") as arquivo:
         csv.writer(arquivo).writerows(linhasDaPlanilha)
+      razoes = []
+      razoesInteiros = []
+      with open("questao06.csv", mode="r", newline="", encoding="utf-8") as arquivo:
+          file = csv.reader(arquivo)
+          for row in file:
+              razoes.append(row[4])
+      razoes.pop(0)
+      for razao in razoes:
+          if razao != "Sem dados":
+              razoesInteiros.append(float(razao))
+      plt.hist(razoesInteiros, bins=10, color='skyblue', edgecolor='black')
+      # sns.histplot(razoes, kde=True)
+      plt.title('Distribuição das relações issues fechadas/issues abertas')
+      plt.xlabel('Razões issues fechada/issues abertas')
+      plt.ylabel('Frequência')
+      plt.show()
+      # Gerando o gráfico boxplot:
+      plt.boxplot(razoesInteiros)
+      plt.title('Distribuição das relações issues fechadas/issues abertas')
+      plt.xlabel("Razões issues fechada/issues abertas")
+      plt.ylabel("Frequência")
+      plt.show()
   else:
     print("Erro ao acessar API do GitHub")
     print("Código do erro:")
