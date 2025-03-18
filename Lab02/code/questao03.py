@@ -1,0 +1,1 @@
+# Código para análise da relação entre atividade dos repositórios e suas métricas de qualidade
