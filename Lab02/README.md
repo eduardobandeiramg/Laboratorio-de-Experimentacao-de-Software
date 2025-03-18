@@ -18,7 +18,7 @@ Então, execute cada arquivo ("questao01.py", "questao02.py", "questao03.py", "q
 * RQ 03: Qual a relação entre a atividade dos repositórios e as suas características de qualidade?
 * RQ 04: Qual a relação entre o tamanho dos repositórios e as suas características de qualidade?
 
-# Métricas Consideradas:
+## Métricas Consideradas:
 * Popularidade: quantidade de estrelas
 * Maturidade: idade em anos
 * Atividade: número de releases
