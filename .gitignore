@@ -1,6 +1,9 @@
 # Arquivo DS Store do Mac
 .DS_Store
 
+# Arquivo csv temporário:
+questao01.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
