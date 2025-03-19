@@ -4,6 +4,10 @@
 import subprocess, os, shutil
 from pathlib import Path
 import csv, statistics
+from datetime import datetime
+
+# Recuperando hora atual para calcular tempo de execucao:
+inicio = datetime.now()
 
 # Percorrendo o CSV com dados dos repositórios para obter métricas:
 linhasDaPlanilha = [["Repositório", "Linguagem Principal", "Url", "Estrelas", "Idade em anos", "Número de releases", "Total de linhas", "Média de CBO's", "Mediana de CBO's", "Desvio Padrão de CBO's", "Média de DIT's", "Mediana de DIT's", "Desvio Padrão de DIT's", "Média de LCOM's", "Mediana de LCOM's", "Desvio Padrão de LCOM's"]]
@@ -103,3 +107,8 @@ with open("diretorio_resultados/resultados_finais.csv", mode="w", encoding="utf-
 
 # Apagando planilha inicial:
 # os.remove(Path("questao01.csv").resolve())
+
+# Recuperando hora final:
+fim = datetime.now()
+tempoTotal = (fim - inicio).min
+print(f"Tempo total de execução: {tempoTotal/60} horas")
