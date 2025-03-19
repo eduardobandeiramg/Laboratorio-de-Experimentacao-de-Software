@@ -21,20 +21,14 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
         url_repositorio = linha[2]
         # Comando para clonar repositório:
         try:
-            resultado_clonagem = subprocess.run(["git", "clone", url_repositorio], check=True, text=True, cwd="diretorio_repositorio")
+            pasta_repositorio_clonado = f"diretorio_repositorio_{linha[0]}"
+            resultado_clonagem = subprocess.run(["git", "clone", url_repositorio], check=True, text=True, cwd=pasta_repositorio_clonado)
             print(f"resultado da clonagem: {resultado_clonagem.returncode}")
             print(f"resultado da clonagem: {resultado_clonagem.stdout}")
-            # Obtendo caminho do repositório clonado
-            caminho_diretorio_repositorio = Path("diretorio_repositorio")
-            subdirs = [d for d in caminho_diretorio_repositorio.iterdir() if d.is_dir()]
-            if len(subdirs) == 1:
-                caminho_repositorio = subdirs[0]
-            else:
-                print("Erro: mais de uma ou nenhuma pasta encontrada.")
             # Obtendo o caminho absoluto da pasta do repositorio:
-            caminho_absoluto_repositorio = Path(caminho_repositorio).resolve()
+            caminho_absoluto_repositorio = Path(pasta_repositorio_clonado).resolve()
             # Obtendo o caminho absoluto da pasta de resultados:
-            caminho_absoluto_resultados = Path("diretorio_resultados/metricas_extraidas_").resolve()
+            caminho_absoluto_resultados = Path(f"diretorio_resultados/metricas_{linha[0]}_").resolve()
             # Comando CK:
             comando_ck = ["java",  "-jar", "ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar", caminho_absoluto_repositorio, "use_jars:true", "0", "variables_and_fields_metrics:true", caminho_absoluto_resultados]
             # Executando o comando ck na pasta do repositorio clonado:
@@ -44,7 +38,7 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
             dits = []
             lcoms = []
             linhasDeCodigo = []
-            with open("diretorio_resultados/metricas_extraidas_class.csv", mode="r", newline="", encoding="utf-8") as arquivoMetricas:
+            with open(f"diretorio_resultados/metricas_{linha[0]}_class.csv", mode="r", newline="", encoding="utf-8") as arquivoMetricas:
                 planilhaMetricas = csv.reader(arquivoMetricas)
                 next(planilhaMetricas)
                 for linha in planilhaMetricas:
@@ -92,8 +86,8 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
             linhasDaPlanilha.append(novaLinha)
 
             # Apagando arquivos gerados (arquivos de resultados da ferramenta ck e diretorio do repositorio clonado):
-            os.remove(Path("diretorio_resultados/metricas_extraidas_class.csv").resolve())
-            os.remove(Path("diretorio_resultados/metricas_extraidas_method.csv").resolve())
+            os.remove(Path(f"diretorio_resultados/metricas_{linha[0]}_class.csv").resolve())
+            os.remove(Path(f"diretorio_resultados/metricas_{linha[0]}_method.csv").resolve())
             subprocess.run(["rm", "-rf", ".git"], cwd=caminho_absoluto_repositorio)
             shutil.rmtree(caminho_absoluto_repositorio)
         except Exception as e:
