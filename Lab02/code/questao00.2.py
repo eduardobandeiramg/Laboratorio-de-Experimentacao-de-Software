@@ -14,6 +14,7 @@ linhasDaPlanilha = [["Repositório", "Linguagem Principal", "Url", "Estrelas", "
 with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRepos:
     planilhaRepos = csv.reader(arquivoRepos)
     next(planilhaRepos)
+    variavelControle = 1
     for linha in planilhaRepos:
         print(f"\nTrabalhando sobre o repositório numero {variavelControle}")
         variavelControle+=1
