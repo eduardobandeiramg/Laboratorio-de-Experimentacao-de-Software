@@ -1,5 +1,4 @@
 # Arquivo temporário para extração das métricas de qualidade
-# TODO: NAO DEPENDER DE CONSEGUIR APAGAR REPO OU RESULTADOS
 # TODO: JUNTAR COM O CÓDIGO DO ARQUIVO 00.1
 import subprocess, os, shutil
 from pathlib import Path
@@ -15,22 +14,23 @@ linhasDaPlanilha = [["Repositório", "Linguagem Principal", "Url", "Estrelas", "
 with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRepos:
     planilhaRepos = csv.reader(arquivoRepos)
     next(planilhaRepos)
-    variavelControle = 0
+    variavelControle = 1
     for linha in planilhaRepos:
+        if variavelControle == 11:
+            break
+        print(f"\nTrabalhando sobre o repositório numero {variavelControle}")
         variavelControle+=1
-        erroAoClonar = False
-        print(f"Trabalhando sobre o repositório numero {variavelControle}")
         novaLinha = []
         novaLinha.extend([linha[0], linha[1], linha[2], linha[3], linha[4], linha[5], linha[6]])
         url_repositorio = linha[2]
         # Comando para clonar repositório:
         try:
-            pasta_repositorio_clonado = f"diretorio_repositorio_{linha[0]}"
+            pasta_repositorio_clonado = "diretorio_repositorio"
             resultado_clonagem = subprocess.run(["git", "clone", url_repositorio], check=True, text=True, cwd=pasta_repositorio_clonado)
             print(f"resultado da clonagem: {resultado_clonagem.returncode}")
             print(f"resultado da clonagem: {resultado_clonagem.stdout}")
             # Obtendo o caminho absoluto da pasta do repositorio:
-            caminho_absoluto_repositorio = Path(pasta_repositorio_clonado).resolve()
+            caminho_absoluto_repositorio = Path(f"{pasta_repositorio_clonado}/{linha[0]}").resolve()
             # Obtendo o caminho absoluto da pasta de resultados:
             caminho_absoluto_resultados = Path(f"diretorio_resultados/metricas_{linha[0]}_").resolve()
             # Comando CK:
@@ -45,11 +45,11 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
             with open(f"diretorio_resultados/metricas_{linha[0]}_class.csv", mode="r", newline="", encoding="utf-8") as arquivoMetricas:
                 planilhaMetricas = csv.reader(arquivoMetricas)
                 next(planilhaMetricas)
-                for linha in planilhaMetricas:
-                    cbos.append(int(linha[3]))
-                    dits.append(int(linha[8]))
-                    lcoms.append(int(linha[11]))
-                    linhasDeCodigo.append(int(linha[33]))
+                for linha2 in planilhaMetricas:
+                    cbos.append(int(linha2[3]))
+                    dits.append(int(linha2[8]))
+                    lcoms.append(int(linha2[11]))
+                    linhasDeCodigo.append(int(linha2[33]))
             # Obtendo quantidade total de linhas:
             if len(linhasDeCodigo) != 0:
                 linhasDeCodigo = sum(linhasDeCodigo)
@@ -95,7 +95,6 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
             subprocess.run(["rm", "-rf", ".git"], cwd=caminho_absoluto_repositorio)
             shutil.rmtree(caminho_absoluto_repositorio)
         except Exception as e:
-            erroAoClonar = True
             # Adicionando mensagem de erro de clonagem nos campos da linha do repositório:
             novaLinha[6] = "Erro ao clonar repositório"
             novaLinha.extend(["Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório"])
@@ -110,5 +109,5 @@ with open("diretorio_resultados/resultados_finais.csv", mode="w", encoding="utf-
 
 # Recuperando hora final:
 fim = datetime.now()
-tempoTotal = (fim - inicio).min
-print(f"Tempo total de execução: {tempoTotal/60} horas")
+tempoTotal = (fim - inicio).seconds
+print(f"Tempo total de execução: {tempoTotal/3600} horas")

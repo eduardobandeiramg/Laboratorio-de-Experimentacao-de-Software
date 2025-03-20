@@ -1,6 +1,7 @@
 # Arquivo DS Store do Mac
 .DS_Store
-
+#Arquivo de configuracao do vscode:
+.vscode
 # Arquivo csv temporário:
 questao01.csv
 
