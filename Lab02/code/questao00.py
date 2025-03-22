@@ -5,8 +5,9 @@ import requests
 from datetime import datetime
 import csv
 import time
+import pandas as pd
 
-# Definindo a função para requisição:
+### Definindo a função para requisição:
 def fazerQuery(estrelas):
   token = ""
   url = "https://api.github.com/graphql"
@@ -32,7 +33,7 @@ def fazerQuery(estrelas):
   resposta = requests.post(url, headers= header, json= {"query": body})
   return resposta
 
-# Definindo a função para requisição COM PAGINAÇÃO:
+### Definindo a função para requisição COM PAGINAÇÃO:
 def fazerQueryComPaginacao(estrelas , aPartirDe):
   token = ""
   url = "https://api.github.com/graphql"
@@ -58,23 +59,23 @@ def fazerQueryComPaginacao(estrelas , aPartirDe):
   resposta = requests.post(url, headers= header, json= {"query": body})
   return resposta
 
-# Criando variaveis de controle dos loops:
+### Criando variaveis de controle dos loops:
 continuaLoop = True
 loopDeContagem = True
-# Criando variavel para armazenar localizacao do ultimo item:
+### Criando variavel para armazenar localizacao do ultimo item:
 cursorfinal = ""
-# Definindo numero considerável de estrelas:
+### Definindo numero considerável de estrelas:
 qtdEstrelas = 150000
-# Criando lista de linhas para o csv:
+### Criando lista de linhas para o csv:
 linhasDaPlanilha = [["Repositório", "Linguagem principal", "Url", "Estrelas", "Idade em anos", "Número de releases", "Total de linhas"]]
-# Recuperando data atual para cálculo da idade dos repositórios:
+### Recuperando data atual para cálculo da idade dos repositórios:
 agora = datetime.now()
 
-# Consumindo API procurando repositórios e criando o CSV com os dados desses repositórios:
+### Consumindo API procurando repositórios e criando o CSV com os dados desses repositórios:
 while continuaLoop:
-  # Reinicializando loop de contagem:
+  #### Reinicializando loop de contagem:
   loopDeContagem = True
-  # Criando lista para armazenar repositorios:
+  #### Criando lista para armazenar repositorios:
   repos = []
   time.sleep(1)
   resposta = fazerQuery(qtdEstrelas)
@@ -102,11 +103,11 @@ while continuaLoop:
         print(f"{str(loop)}º Repositório mais popular do GitHub:")
         loop+=1
         print(valor)
-        # Calculando idade do repositório:
+        #### Calculando idade do repositório:
         dataCriacao = datetime.strptime(valor["createdAt"] , f"%Y-%m-%dT%H:%M:%SZ")
         idade = ((agora - dataCriacao).days)/365
         linhasDaPlanilha.append([valor["name"], valor["primaryLanguage"]["name"], valor["url"], valor["stargazerCount"], idade, valor["releases"]["totalCount"], "Ainda sem dados"])
-      # Gerando a planilha com os dados obtidos:
+      #### Gerando a planilha com os dados obtidos:
       with open("questao01.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
         csv.writer(arquivo).writerows(linhasDaPlanilha)
   else:
@@ -121,14 +122,14 @@ import subprocess, os, shutil
 from pathlib import Path
 import statistics
 
-# Recuperando hora atual para calcular tempo de execucao:
+### Recuperando hora atual para calcular tempo de execucao:
 inicio = datetime.now()
 
-# Criando as pastas onde os arquivos serao criados:
+### Criando as pastas onde os arquivos serao criados:
 subprocess.run(["mkdir", "diretorio_repositorio"])
 subprocess.run(["mkdir", "diretorio_resultados"])
 
-# Percorrendo o CSV com dados dos repositórios para obter métricas:
+### Percorrendo o CSV com dados dos repositórios para obter métricas:
 linhasDaPlanilha = [["Repositório", "Linguagem Principal", "Url", "Estrelas", "Idade em anos", "Número de releases", "Total de linhas", "Média de CBO's", "Mediana de CBO's", "Desvio Padrão de CBO's", "Média de DIT's", "Mediana de DIT's", "Desvio Padrão de DIT's", "Média de LCOM's", "Mediana de LCOM's", "Desvio Padrão de LCOM's"]]
 
 with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRepos:
@@ -141,21 +142,21 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
         novaLinha = []
         novaLinha.extend([linha[0], linha[1], linha[2], linha[3], linha[4], linha[5], linha[6]])
         url_repositorio = linha[2]
-        # Comando para clonar repositório:
+        #### Comando para clonar repositório:
         try:
             pasta_repositorio_clonado = "diretorio_repositorio"
             resultado_clonagem = subprocess.run(["git", "clone", url_repositorio], check=True, text=True, cwd=pasta_repositorio_clonado)
             print(f"resultado da clonagem: {resultado_clonagem.returncode}")
             print(f"resultado da clonagem: {resultado_clonagem.stdout}")
-            # Obtendo o caminho absoluto da pasta do repositorio:
+            ##### Obtendo o caminho absoluto da pasta do repositorio:
             caminho_absoluto_repositorio = Path(f"{pasta_repositorio_clonado}/{linha[0]}").resolve()
-            # Obtendo o caminho absoluto da pasta de resultados:
+            ##### Obtendo o caminho absoluto da pasta de resultados:
             caminho_absoluto_resultados = Path(f"diretorio_resultados/metricas_{linha[0]}_").resolve()
-            # Comando CK:
+            ##### Comando CK:
             comando_ck = ["java",  "-jar", "ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar", caminho_absoluto_repositorio, "use_jars:true", "0", "variables_and_fields_metrics:true", caminho_absoluto_resultados]
-            # Executando o comando ck na pasta do repositorio clonado:
+            ##### Executando o comando ck na pasta do repositorio clonado:
             resultado_ck = subprocess.run(comando_ck, cwd="CK/target")
-            # Pegando as métricas:
+            ##### Pegando as métricas:
             cbos = []
             dits = []
             lcoms = []
@@ -168,13 +169,13 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
                     dits.append(int(linha2[8]))
                     lcoms.append(int(linha2[11]))
                     linhasDeCodigo.append(int(linha2[33]))
-            # Obtendo quantidade total de linhas:
+            ##### Obtendo quantidade total de linhas:
             if len(linhasDeCodigo) != 0:
                 linhasDeCodigo = sum(linhasDeCodigo)
             else:
                 linhasDeCodigo = "Sem dados"
-            # Obtendo os valores de medida central:
-            # Dos CBO's
+            ##### Obtendo os valores de medida central:
+            ##### Dos CBO's
             if len(cbos) == 0:
                 mediaCbos = "Sem dados"
                 medianaCbos = "Sem dados"
@@ -183,7 +184,7 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
                 mediaCbos = statistics.mean(cbos)
                 medianaCbos = statistics.median(cbos)
                 desvioPadraoCbos = statistics.stdev(cbos)
-            # Das DIT's:
+            ##### Das DIT's:
             if len(dits) == 0:
                 mediaDits = "Sem dados"
                 medianaDits = "Sem dados"
@@ -192,7 +193,7 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
                 mediaDits = statistics.mean(dits)
                 medianaDits = statistics.median(dits)
                 desvioPadraoDits = statistics.stdev(dits)
-            # Dos LCOM's:
+            ##### Dos LCOM's:
             if len(lcoms) == 0:
                 mediaLcoms = "Sem dados"
                 medianaLcoms = "Sem dados"
@@ -202,33 +203,64 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
                 medianaLcoms = statistics.median(lcoms)
                 desvioPadraoLcoms = statistics.stdev(lcoms)
 
-            # Adicionando métricas na linha da planilha final:
+            ##### Adicionando métricas na linha da planilha final:
             novaLinha[6] = linhasDeCodigo
             novaLinha.extend([mediaCbos, medianaCbos, desvioPadraoCbos, mediaDits, medianaDits, desvioPadraoDits, mediaLcoms, medianaLcoms, desvioPadraoLcoms])
             linhasDaPlanilha.append(novaLinha)
 
-            # Apagando arquivos gerados (arquivos de resultados da ferramenta ck e diretorio do repositorio clonado):
+            #### Apagando arquivos gerados (arquivos de resultados da ferramenta ck e diretorio do repositorio clonado):
             os.remove(Path(f"diretorio_resultados/metricas_{linha[0]}_class.csv").resolve())
             os.remove(Path(f"diretorio_resultados/metricas_{linha[0]}_method.csv").resolve())
-            # subprocess.run(["rm", "-rf", ".git"], cwd=caminho_absoluto_repositorio)
+            #### subprocess.run(["rm", "-rf", ".git"], cwd=caminho_absoluto_repositorio)
             shutil.rmtree(caminho_absoluto_repositorio)
         except Exception as e:
-            # Adicionando mensagem de erro de clonagem nos campos da linha do repositório:
+            #### Adicionando mensagem de erro de clonagem nos campos da linha do repositório:
             novaLinha[6] = "Erro ao clonar repositório"
             novaLinha.extend(["Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório", "Erro ao clonar repositório"])
             linhasDaPlanilha.append(novaLinha)
 
-# Criando CSV com todas as métricas para cada repositório:
+### Criando CSV com todas as métricas para cada repositório:
 with open("diretorio_resultados/resultados_finais.csv", mode="w", encoding="utf-8", newline="") as arquivoFinal:
     csv.writer(arquivoFinal).writerows(linhasDaPlanilha)
 
-# Apagando planilha inicial:
+### Apagando planilha inicial:
 os.remove(Path("questao01.csv").resolve())
 
-# Apagando diretorio de repositórios clonados:
+### Apagando diretorio de repositórios clonados:
 shutil.rmtree(Path("diretorio_repositorio").resolve())
 
-# Recuperando hora final:
+### Recuperando hora final:
 fim = datetime.now()
 tempoTotal = (fim - inicio).seconds
 print(f"Tempo total de execução: {tempoTotal/3600} horas")
+
+
+## Terceira Parte: Realizando teste de correlação:
+### Gerando nova planilha limpa para calcular correlação
+linhasDaPlanilha = [["Estrelas", "Idade em anos", "Releases", "Linhas totais", "Media de CBO's", "Mediana de CBO's", "Media de DIT's", "Mediana de DIT's", "Media de LCOM's", "Mediana de LCOM's"]]
+with open("diretorio_resultados/resultados_finais.csv", mode="r", newline="", encoding="utf-8") as arquivo:
+    planilha = csv.reader(arquivo)
+    for linha in planilha:
+        try:
+            qtdEstrelas = float(linha[3])
+            idade = float(linha[4])
+            releases = float(linha[5])
+            linhas = float(linha[6])
+            qtdMediaCbos = float(linha[7])
+            qtdMedianaCbos = float(linha[8])
+            qtdMediaDits = float(linha[10])
+            qtdMedianaDits = float(linha[11])
+            qtdMediaLcoms = float(linha[13])
+            qtdMedianaLcoms = float(linha[14])
+            novaLinha = [qtdEstrelas, idade, releases, linhas, qtdMediaCbos, qtdMedianaCbos, qtdMediaDits, qtdMedianaDits, qtdMediaLcoms, qtdMedianaLcoms]
+            linhasDaPlanilha.append(novaLinha)
+        except Exception as e:
+             continue
+with open("diretorio_resultados/planilha_base_correlacao.csv", mode="w", encoding="utf-8", newline="") as arquivo:
+    planilha2 = csv.writer(arquivo)
+    planilha2.writerows(linhasDaPlanilha)
+    
+### Calculando correlação:
+matriz = pd.read_csv("diretorio_resultados/planilha_base_correlacao.csv", encoding="utf-8")
+print(matriz.corr())
+matriz.corr().to_csv("diretorio_resultados/resultado_correlacao.csv")
