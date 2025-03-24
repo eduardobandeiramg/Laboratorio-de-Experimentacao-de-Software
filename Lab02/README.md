@@ -12,10 +12,11 @@
 3. Execute o código
 
 Ao executar o código: as seguintes etapas serão executadas:
-    1. A API do GitHub será consumida e será gerado um arquivo CSV com as informações necessárias de cada repositório.
-    2. Cada repositório será, então, clonado, e serão obtidas as métricas para ele a partir da execução da ferramenta [CK](https://github.com/mauricioaniche/ck) dentro de cada repositório.
-    3. Será criada a matriz de correlação para todas as variáveis (e exportada para csv) dentro da pasta "diretorio_resultados".
-    4. Será gerado o gráfico de calor para todas as variáveis analisadas.
+
+- A API do GitHub será consumida e será gerado um arquivo CSV com as informações necessárias de cada repositório.
+- Cada repositório será, então, clonado, e serão obtidas as métricas para ele a partir da execução da ferramenta [CK](https://github.com/mauricioaniche/ck) dentro de cada repositório.
+- Será criada a matriz de correlação para todas as variáveis (e exportada para csv) dentro da pasta "diretorio_resultados".
+- Será gerado o gráfico de calor para todas as variáveis analisadas.
 
 
 ## Questões de Pesquisa:
