@@ -1,1 +1,0 @@
-# Código para análise da relação entre tamanho dos repositórios e suas métricas de qualidade

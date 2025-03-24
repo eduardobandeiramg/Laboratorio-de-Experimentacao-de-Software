@@ -11,9 +11,12 @@
 
 3. Execute o código
 
-Isso é necessário para que, primeiramente, a API do GitHub seja consumida e seja gerado um arquivo CSV com as informações necessárias de cada repositório. Depois disso, cada repositório será, então, clonado, e serão obtidas as métricas para ele a partir da execução da ferramenta [CK](https://github.com/mauricioaniche/ck) dentro de cada repositório. Por último, será verificada a relação de correlação entre cada característica do repositório.
+Ao executar o código: as seguintes etapas serão executadas:
+    1. A API do GitHub será consumida e será gerado um arquivo CSV com as informações necessárias de cada repositório.
+    2. Cada repositório será, então, clonado, e serão obtidas as métricas para ele a partir da execução da ferramenta [CK](https://github.com/mauricioaniche/ck) dentro de cada repositório.
+    3. Será criada a matriz de correlação para todas as variáveis (e exportada para csv) dentro da pasta "diretorio_resultados".
+    4. Será gerado o gráfico de calor para todas as variáveis analisadas.
 
-Então, execute cada arquivo ("questao01.py", "questao02.py", "questao03.py", "questao04.py") para obter os gráficos para cada questão de pesquisa. 
 
 ## Questões de Pesquisa:
 * RQ 01: Qual a relação entre a popularidade dos repositórios e as suas características de qualidade?

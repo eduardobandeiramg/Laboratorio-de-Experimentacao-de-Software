@@ -108,12 +108,14 @@ while continuaLoop:
         idade = ((agora - dataCriacao).days)/365
         linhasDaPlanilha.append([valor["name"], valor["primaryLanguage"]["name"], valor["url"], valor["stargazerCount"], idade, valor["releases"]["totalCount"], "Ainda sem dados"])
       #### Gerando a planilha com os dados obtidos:
-      with open("questao01.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
+      with open("planilha_repositorios.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
         csv.writer(arquivo).writerows(linhasDaPlanilha)
   else:
     print("Erro ao acessar API do GitHub")
     print("Descrição do erro:")
     print(resposta.status_code)
+
+
 
 
 
@@ -132,7 +134,7 @@ subprocess.run(["mkdir", "diretorio_resultados"])
 ### Percorrendo o CSV com dados dos repositórios para obter métricas:
 linhasDaPlanilha = [["Repositório", "Linguagem Principal", "Url", "Estrelas", "Idade em anos", "Número de releases", "Total de linhas", "Média de CBO's", "Mediana de CBO's", "Desvio Padrão de CBO's", "Média de DIT's", "Mediana de DIT's", "Desvio Padrão de DIT's", "Média de LCOM's", "Mediana de LCOM's", "Desvio Padrão de LCOM's"]]
 
-with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRepos:
+with open("planilha_repositorios.csv", mode="r", encoding="utf-8", newline="") as arquivoRepos:
     planilhaRepos = csv.reader(arquivoRepos)
     next(planilhaRepos)
     variavelControle = 1
@@ -168,10 +170,11 @@ with open("questao01.csv", mode="r", encoding="utf-8", newline="") as arquivoRep
                     cbos.append(int(linha2[3]))
                     dits.append(int(linha2[8]))
                     lcoms.append(int(linha2[11]))
-                    linhasDeCodigo.append(int(linha2[33]))
+                    linhasDeCodigo.append(int(linha2[34]))
             ##### Obtendo quantidade total de linhas:
             if len(linhasDeCodigo) != 0:
                 linhasDeCodigo = sum(linhasDeCodigo)
+                print(f"Linhas de código: {linhasDeCodigo}")
             else:
                 linhasDeCodigo = "Sem dados"
             ##### Obtendo os valores de medida central:
@@ -224,7 +227,7 @@ with open("diretorio_resultados/resultados_finais.csv", mode="w", encoding="utf-
     csv.writer(arquivoFinal).writerows(linhasDaPlanilha)
 
 ### Apagando planilha inicial:
-os.remove(Path("questao01.csv").resolve())
+# os.remove(Path("planilha_repositorios.csv").resolve())
 
 ### Apagando diretorio de repositórios clonados:
 shutil.rmtree(Path("diretorio_repositorio").resolve())
@@ -235,7 +238,12 @@ tempoTotal = (fim - inicio).seconds
 print(f"Tempo total de execução: {tempoTotal/3600} horas")
 
 
+
+
+
 ## Terceira Parte: Realizando teste de correlação:
+import matplotlib.pyplot as plt
+import seaborn as sns
 ### Gerando nova planilha limpa para calcular correlação
 linhasDaPlanilha = [["Estrelas", "Idade em anos", "Releases", "Linhas totais", "Media de CBO's", "Mediana de CBO's", "Media de DIT's", "Mediana de DIT's", "Media de LCOM's", "Mediana de LCOM's"]]
 with open("diretorio_resultados/resultados_finais.csv", mode="r", newline="", encoding="utf-8") as arquivo:
@@ -260,7 +268,13 @@ with open("diretorio_resultados/planilha_base_correlacao.csv", mode="w", encodin
     planilha2 = csv.writer(arquivo)
     planilha2.writerows(linhasDaPlanilha)
     
-### Calculando correlação:
+### Gerando matriz de correlação de Pearson:
 matriz = pd.read_csv("diretorio_resultados/planilha_base_correlacao.csv", encoding="utf-8")
-print(matriz.corr())
+matrizCorr = matriz.corr()
 matriz.corr().to_csv("diretorio_resultados/resultado_correlacao.csv")
+
+### Gerando grafico de calor:
+plt.figure(figsize=(6, 4))
+sns.heatmap(matrizCorr, annot=True, cmap="coolwarm", fmt=".2f")
+plt.title("Matriz de Correlação")
+plt.show()
