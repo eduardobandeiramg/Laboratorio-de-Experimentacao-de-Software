@@ -1,8 +1,5 @@
 import requests
-import statistics
 import csv
-import matplotlib.pyplot as plt
-import seaborn as sns
 import time
 
 # Definindo a função para requisição:
@@ -42,6 +39,7 @@ def fazerQueryComPaginacao(estrelas , aPartirDe):
                 ... on Repository {{
                     name
                     stargazerCount
+                    url
                     pullRequests(states:MERGED){{
                     totalCount
                     }}
@@ -64,7 +62,7 @@ cursorfinal = ""
 # Definindo numero alto de estrelas:
 qtdEstrelas = 420000
 # Criando lista de linhas para o csv:
-linhasDaPlanilha = [["Repositório", "Estrelas", "PR's mergeadas"]]
+linhasDaPlanilha = [["Repositório", "Estrelas", "PR's mergeadas", "url"]]
 
 while continuaLoop:
   # Reinicializando loop de contagem:
@@ -97,12 +95,14 @@ while continuaLoop:
       loop = 1
       continuaLoop = False
       for valor in repos:
+        if loop > 200:
+          break
         print(f"{str(loop)}º Repositório mais popular do GitHub e com mais de 100 PR's mergeadas:")
-        loop+=1
         print(valor)
-        linhasDaPlanilha.append([valor["name"], valor["stargazerCount"], valor["pullRequests"]["totalCount"]])
+        linhasDaPlanilha.append([valor["name"], valor["stargazerCount"], valor["pullRequests"]["totalCount"], valor["url"]])
+        loop+=1
       # Gerando a planilha com os dados obtidos:
-      with open("lista_base_repositorios.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
+      with open("Lab03/planilhas/lista_base_repositorios.csv", mode= "w", newline= "", encoding= "utf-8") as arquivo:
         csv.writer(arquivo).writerows(linhasDaPlanilha)
 
   else:

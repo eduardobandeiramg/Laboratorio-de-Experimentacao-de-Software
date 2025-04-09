@@ -1,0 +1,3 @@
+O código contido no arquivo "1_buscando_repos.py" faz a busca pelos 200 repositórios mais populares do GitHub (mais estrelados) que tenham pelo menos 100 Pull Requests mergeadas. O resultado será um arquivo csv nomeado "lista_base_repositorios.csv".
+
+O código contido no arquivo "2_analisando_PRs.py" busca todas as Pull Requests de cada um dos repositórios encontrados, com cada uma das características a serem analisadas.
