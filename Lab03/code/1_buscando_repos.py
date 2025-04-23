@@ -89,14 +89,12 @@ while continuaLoop:
         cursorfinal = respostaRequisicao["data"]["search"]["pageInfo"]["endCursor"]
         resposta = fazerQueryComPaginacao(qtdEstrelas , cursorfinal)
         respostaRequisicao = resposta.json()
-    if len(repos) < 200:
+    if len(repos) < 300:
       qtdEstrelas -= 5000
     else:
       loop = 1
       continuaLoop = False
       for valor in repos:
-        if loop > 200:
-          break
         print(f"{str(loop)}º Repositório mais popular do GitHub e com mais de 100 PR's mergeadas:")
         print(valor)
         linhasDaPlanilha.append([valor["name"], valor["stargazerCount"], valor["pullRequests"]["totalCount"], valor["url"]])
