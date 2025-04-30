@@ -44,7 +44,7 @@ def buscandoDadosPRs(autor, nome):
     }}
     }}
     }}"""
-    tentativas = 15
+    tentativas = 20
     for tentativa in range(tentativas):
         try:
             resposta = requests.post(url, headers= header, json= {"query": body}, timeout=200)
@@ -53,16 +53,20 @@ def buscandoDadosPRs(autor, nome):
                     if "data" in resposta.json():
                         return resposta
                     else:
+                        print("Resposta 200 mas com erro")
+                        time.sleep(15)
                         continue
                 else:
                     print("Status code diferente de 200. Tentando de novo")
+                    time.sleep(15)
                     continue
             else:
                 print("Reposta vazia. Tentando de novo")
+                time.sleep(15)
                 continue
         except Exception as e:
             print(f"Tentativa {tentativa + 1} falhou com erro: {e}")
-            time.sleep(10)
+            time.sleep(15)
     raise Exception("Falha após múltiplas tentativas")
 
 # Definindo requisição com paginação:
@@ -105,7 +109,7 @@ def buscandoDadosPRsComPaginacao(autor, nome, aPartirDe):
     }}
     }}
     }}"""
-    tentativas = 15
+    tentativas = 20
     for tentativa in range(tentativas):
         try:
             resposta = requests.post(url, headers= header, json= {"query": body}, timeout=200)
@@ -114,20 +118,24 @@ def buscandoDadosPRsComPaginacao(autor, nome, aPartirDe):
                     if "data" in resposta.json():
                         return resposta
                     else:
+                        print("Resposta 200 mas com erro")
+                        time.sleep(15)
                         continue
                 else:
                     print("Status code diferente de 200. Tentando de novo")
+                    time.sleep(15)
                     continue
             else:
                 print("Reposta vazia. Tentando de novo")
+                time.sleep(15)
                 continue
         except Exception as e:
             print(f"Tentativa {tentativa + 1} falhou com erro: {e}")
-            time.sleep(10)
+            time.sleep(15)
     raise Exception("Falha após múltiplas tentativas")
 
 # Definindo colunas da planilha que será criada:
-linhasDaPlanilha = [["Repositório", "N° da PR", "Qtd Arquivos", "Adições", "Deleções", "Tempo p/ Fechamento (h)", "Tamanho Descrição", "N° Participantes", "N° Comentários"], "Aceita?"]
+linhasDaPlanilha = [["Repositório", "N° da PR", "Qtd Arquivos", "Adições", "Deleções", "Tempo p/ Fechamento (h)", "Tamanho Descrição", "N° Participantes", "N° Comentários", "Aceita?"]]
 
 # Percorrendo csv para buscar dados dos repositorios listados:
 with open("Lab03/planilhas/lista_base_repositorios.csv", mode="r", encoding="utf-8", newline="") as arquivo:
@@ -204,7 +212,7 @@ with open("Lab03/planilhas/lista_base_repositorios.csv", mode="r", encoding="utf
                 qtdRepos-=1
                 totaRepos+=1
                 break  
-    with open("Lab03/planilhas/dados_sobre_pull_requests.csv", mode="w", encoding="utf-8", newline="") as arquivo2:
+    with open("Lab03/planilhas/dados_pull_requests_fechadas.csv", mode="w", encoding="utf-8", newline="") as arquivo2:
         csv.writer(arquivo2).writerows(linhasDaPlanilha)
 
     print(f"Repositorios com problema: {repositoriosComProblema}")
