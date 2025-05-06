@@ -115,7 +115,7 @@ for i in range(len(linhasDaPlanilha)):
     linhasMatrizInteracoes.append([linhasDaPlanilha[i][7], linhasDaPlanilha[i][8], linhasDaPlanilha[i][9]])
 
 with open("Lab03/planilhas/planilhas_base_corr/matriz_corr_interacoes_aceita.csv", mode="w", encoding="utf-8", newline="") as arquivo5:
-    csv.writer(arquivo5).writerows(linhasMatrizDescricao)
+    csv.writer(arquivo5).writerows(linhasMatrizInteracoes)
 
 ### Gerando matriz de correlação de Pearson:
 matriz = pd.read_csv("Lab03/planilhas/planilhas_base_corr/matriz_corr_interacoes_aceita.csv", encoding="utf-8")
